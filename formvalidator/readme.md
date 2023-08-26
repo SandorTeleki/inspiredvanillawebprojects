@@ -1,9 +1,9 @@
-##Original content
-## Form Validator (Intro Project)
+# Original content
+#### Form Validator (Intro Project)
 
 Simple client side form validation. Check required, length, email and password match
 
-## Project Specifications
+#### Project Specifications
 
 - Create form UI
 - Show error messages under specific inputs
@@ -12,5 +12,5 @@ Simple client side form validation. Check required, length, email and password m
 - checkEmail() to validate email with regex
 - checkPasswordsMatch() to match confirm password
 
-##Changes:
+## Changes:
 - Changed CSS
