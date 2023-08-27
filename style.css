@@ -1,7 +1,41 @@
+/* Redo with BEM style */
 h1 {
-    color: darkorange;
+    color: darkgreen;
+    margin: 0;
+    text-decoration: underline;
+    padding: 20px 0px;
 }
 
-h2 {
+h3 {
     color: darkcyan;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 0;
+}
+
+main {
+    border: 1px solid red;
+}
+
+a {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+body {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
 }
