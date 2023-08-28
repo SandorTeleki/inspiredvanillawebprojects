@@ -5,6 +5,8 @@ Mini projects built with HTML5, CSS & JS. Each project was based on the projects
 # Main page: 
 This is the home for my Mini Projects. You can either navigate through the projects through the links below in the README.md file, or you can access the main page and access the Mini Projects from there.
 
+For these projets, I wanted to practice my basic CSS and JS skills, so many of the changes (compared to the orignal) come in the form of changing the CSS formating style to using the BEM methodology and trying to add some new JS functions that expand the core functionality of each project.
+
 https://sandorteleki.github.io/inspiredvanillawebprojects/
 
 ## Form Validator:
