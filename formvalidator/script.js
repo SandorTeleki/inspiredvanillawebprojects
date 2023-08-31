@@ -18,6 +18,20 @@ function showSuccess(input) {
   formControl.className = 'form-control success';
 }
 
+//New success outline - Bad test #1
+// function showSuccess(input) {
+//   const formControl = document.getElementById("username_input");
+//   formControl.className = 'form-control__input form-control__input_success';
+// }
+
+//New success outline - Bad test #2
+// function showSuccess(input) {
+//   const formControl = input.currentTarget;
+//   console.log(input.currentTarget);
+//   formControl.className = 'form-control__input form-control__input_success';
+// }
+
+
 // Check email is valid
 function checkEmail(input) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -82,5 +96,4 @@ form.addEventListener('submit', function(e) {
     checkEmail(email);
     checkPasswordsMatch(password, password2);
   }
-
 });

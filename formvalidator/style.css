@@ -40,11 +40,14 @@
 
 .form__title {
   text-align: center;
-  margin: 0 0 20px;
+  margin: 0 0 20px; 
 }
 
 .form {
-  padding: 30px 20px;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
 }
 
 .form-control {
@@ -66,6 +69,7 @@
   width: 100%;
   padding: 10px;
   font-size: 14px;
+  max-width: 276px;
 }
 
 .form-control__input:focus {
@@ -73,6 +77,17 @@
   border-color: #777;
 }
 
+
+/* New Input color changes */
+.form-control__input_success {
+  border-color: var(--success-color);
+}
+
+.form-control__input_error {
+  border-color: var(--error-color);
+}
+
+/* Old Input color changes */
 .form-control.success input {
   border-color: var(--success-color);
 }
@@ -80,6 +95,8 @@
 .form-control.error input {
   border-color: var(--error-color);
 }
+
+
 
 .form-control small {
   color: var(--error-color);
@@ -92,6 +109,7 @@
 .form-control.error small {
   visibility: visible;
 }
+
 
 .form__button {
   cursor: pointer;
