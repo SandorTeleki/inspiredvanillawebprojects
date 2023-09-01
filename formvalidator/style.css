@@ -98,7 +98,7 @@
 
 
 
-.form-control small {
+.form-control span {
   color: var(--error-color);
   position: absolute;
   bottom: 0;
@@ -106,7 +106,7 @@
   visibility: hidden;
 }
 
-.form-control.error small {
+.form-control.error span {
   visibility: visible;
 }
 

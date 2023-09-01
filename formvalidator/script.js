@@ -4,19 +4,27 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
+const usernamediv = document.getElementById('usernamediv');
+const emaildiv = document.getElementById('emaildiv');
+const passworddiv = document.getElementById('passworddiv');
+const password2div = document.getElementById('password2div');
+
+
+
+
 // Show input error message
 function showError(input, message) {
   const formControl = input.parentElement;
   formControl.className = 'form-control error';
-  const small = formControl.querySelector('small');
-  small.innerText = message;
+  const span = formControl.querySelector('span');
+  span.innerText = message;
 }
 
 // Show success outline
-function showSuccess(input) {
-  const formControl = input.parentElement;
-  formControl.className = 'form-control success';
-}
+// function showSuccess(input) {
+//   const formControl = input.parentElement;
+//   formControl.className = 'form-control success';
+// }
 
 //New success outline - Bad test #1
 // function showSuccess(input) {
@@ -31,6 +39,21 @@ function showSuccess(input) {
 //   formControl.className = 'form-control__input form-control__input_success';
 // }
 
+// Show success outline - Bad Test #3
+// function showSuccess(input) {
+//   const formControl = input.getElementByTagName(span);
+//   formControl.className = 'form-control__input form-control__input_success';
+// }
+
+// Show success outline - Test #4
+function showSuccess(input) {
+  const formControl = input.parentElement;
+  console.log(`First child element: ` + formControl.firstElementChild);
+  console.log(`Amount of children: `+formControl.childElementCount);
+  console.log(`Selecting all the children: `+ formControl.children);
+  console.log(formControl.children[1]); // does return the second child, use this to add needed class
+  formControl.className = 'form-control success';
+}
 
 // Check email is valid
 function checkEmail(input) {
