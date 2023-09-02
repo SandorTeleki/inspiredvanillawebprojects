@@ -13,4 +13,5 @@ Simple client side form validation. Check required, length, email and password m
 - checkPasswordsMatch() to match confirm password
 
 ## Changes:
-- Changed CSS
+- Fully converted CSS to use BEM methodology
+- Updated JS to user new BEM classes and not rely on stacking specificity

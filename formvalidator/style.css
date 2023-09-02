@@ -77,8 +77,6 @@
   border-color: #777;
 }
 
-
-/* New Input color changes */
 .form-control__input_success {
   border-color: var(--success-color);
 }
@@ -87,18 +85,7 @@
   border-color: var(--error-color);
 }
 
-/* Old Input color changes */
-.form-control.success input {
-  border-color: var(--success-color);
-}
-
-.form-control.error input {
-  border-color: var(--error-color);
-}
-
-
-
-.form-control span {
+.form-control__span {
   color: var(--error-color);
   position: absolute;
   bottom: 0;
@@ -106,10 +93,9 @@
   visibility: hidden;
 }
 
-.form-control.error span {
+.form-control__span_error {
   visibility: visible;
 }
-
 
 .form__button {
   cursor: pointer;

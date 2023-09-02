@@ -10,50 +10,22 @@ const passworddiv = document.getElementById('passworddiv');
 const password2div = document.getElementById('password2div');
 
 
-
-
-// Show input error message
+//Show input error message - Test 1
 function showError(input, message) {
   const formControl = input.parentElement;
-  formControl.className = 'form-control error';
+  formControl.children[1].className = 'form-control__input form-control__input_error';
+  formControl.children[2].className = 'form-control__span form-control__span_error';
   const span = formControl.querySelector('span');
   span.innerText = message;
 }
 
 // Show success outline
-// function showSuccess(input) {
-//   const formControl = input.parentElement;
-//   formControl.className = 'form-control success';
-// }
-
-//New success outline - Bad test #1
-// function showSuccess(input) {
-//   const formControl = document.getElementById("username_input");
-//   formControl.className = 'form-control__input form-control__input_success';
-// }
-
-//New success outline - Bad test #2
-// function showSuccess(input) {
-//   const formControl = input.currentTarget;
-//   console.log(input.currentTarget);
-//   formControl.className = 'form-control__input form-control__input_success';
-// }
-
-// Show success outline - Bad Test #3
-// function showSuccess(input) {
-//   const formControl = input.getElementByTagName(span);
-//   formControl.className = 'form-control__input form-control__input_success';
-// }
-
-// Show success outline - Test #4
 function showSuccess(input) {
   const formControl = input.parentElement;
-  console.log(`First child element: ` + formControl.firstElementChild);
-  console.log(`Amount of children: `+formControl.childElementCount);
-  console.log(`Selecting all the children: `+ formControl.children);
-  console.log(formControl.children[1]); // does return the second child, use this to add needed class
-  formControl.className = 'form-control success';
+  formControl.children[1].className = 'form-control__input form-control__input_success';
+  formControl.children[2].className = 'form-control__span';
 }
+
 
 // Check email is valid
 function checkEmail(input) {
