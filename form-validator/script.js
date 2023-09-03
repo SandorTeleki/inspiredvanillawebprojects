@@ -4,12 +4,6 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
-const usernamediv = document.getElementById('usernamediv');
-const emaildiv = document.getElementById('emaildiv');
-const passworddiv = document.getElementById('passworddiv');
-const password2div = document.getElementById('password2div');
-
-
 //Show input error message - Test 1
 function showError(input, message) {
   const formControl = input.parentElement;

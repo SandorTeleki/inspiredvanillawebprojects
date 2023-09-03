@@ -6,24 +6,45 @@
     <title>Inspired Vanilla Web Projects</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div>
-        <main>
-            <h1>Inspired Vanilla Web Projects</h1>
-            <h3>Inspiration drawn from: <a href="https://github.com/bradtraversy/vanillawebprojects">Vanilla Web Projects</a></h3>
-            <!-- create a list for the other projects -->
-            <!-- Add them empty, and start styling main page -->
-            <ul>
-                <li><a href="/inspiredvanillawebprojects/formvalidator/index.html">Form Validator</a></li>
+<body class="body">
+    <div class="container">
+        <main class="main">
+            <h1 class="main__title">Inspired Vanilla Web Projects</h1>
+            <h3 class="main__subtitle">Inspiration drawn from: <a class="main__link" href="https://github.com/bradtraversy/vanillawebprojects">Vanilla Web Projects</a></h3>
+            <!-- start styling main page according to BEM-->
+                <!-- Pick a font for main page -->
+                <!-- Add a header/nav -->
+            <ul class="project-list">
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/form-validator/index.html">Form Validator</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/movie-seat-booking/index.html">Movie Seat Booking</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/custom-video-player/index.html">Custom Video Player</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/exchange-rate/index.html">Exchange Rate Calculator</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/dom-array-methods/index.html">DOM Array Methods Project</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/modal-menu-slider/index.html">Menu Slider & Modal</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/hangman/index.html">Hangman Game</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/meal-finder/index.html">Mealfinder App</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/expense-tracker/index.html">Expense Tracker</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/music-player/index.html">Music Player</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/infinite-scroll-blog/index.html">Infinite Scrolling</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/typing-game/index.html">Typing Game</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/speech-text-reader/index.html">Speech Text Reader</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/memory-cards/index.html">Memory Cards</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/lyrics-search/index.html">Lyrics Search</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/relaxer-app/index.html">Relaxer App</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/breakout-game/index.html">Breakout Game</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/new-year-countdown/index.html">New Year Countdown</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/sortable-list/index.html">Sortable List</a></li>
+                <li><a class="project-list__link" href="/inspiredvanillawebprojects/speak-number-guess/index.html">Speak Number Guessing Game</a></li>
+
             </ul>
-            <p>
+            <p class="project__info">
                 For these projets, I wanted to practice my basic CSS and JS skills, so many of the changes (compared to the orignal) 
                 come in the form of changing the CSS formating style to using the BEM methodology and trying to add some new JS functions 
                 that expand the core functionality of each project.
             </p>
         </main>
-    <footer>
-        <div>By: Sandor Teleki</div>
+    <footer class="footer">
+        <div class="footer__author" >By: Sandor Teleki</div>
         <!-- Add a nav to github repo -->
     </footer>
     </div>
