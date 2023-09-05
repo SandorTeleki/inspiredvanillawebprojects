@@ -12,4 +12,7 @@ https://sandorteleki.github.io/inspiredvanillawebprojects/
 ## Form Validator:
 https://sandorteleki.github.io/inspiredvanillawebprojects/formvalidator/index.html
 
+## Movie Seat Booking:
+https://sandorteleki.github.io/inspiredvanillawebprojects/movie-seat-booking/index.html
+
 ## Next project:
