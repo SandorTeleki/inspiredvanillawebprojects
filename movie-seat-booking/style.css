@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
 .body {
-  background-color: #242333;
+  background-color: #120c69;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -60,11 +56,11 @@
   border-top-right-radius: 10px;
 }
 
-.seat.selected {
+.seat__selected {
   background-color: #6feaf6;
 }
 
-.seat.occupied {
+.seat__occupied {
   background-color: #fff;
 }
 
@@ -76,12 +72,12 @@
   margin-left: 18px;
 }
 
-.seat:not(.occupied):hover {
+.seat:not(.seat__occupied):hover {
   cursor: pointer;
   transform: scale(1.2);
 }
 
-.showcase .seat:not(.occupied):hover {
+.showcase .seat:not(.seat__occupied):hover {
   cursor: default;
   transform: scale(1);
 }
@@ -120,6 +116,26 @@
   margin: 15px 0;
   transform: rotateX(-45deg);
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.screen__avengers {
+  background-image: url("https://www.superherohype.com/wp-content/uploads/sites/4/2019/04/Avengers-Endgame-Blast-from-the-Past.jpg?w=640");
+  background-size: 200px 70px;
+}
+
+.screen__joker {
+  background-image: url("https://filmspell.com/wp-content/uploads/2019/10/Joker2019-Movie-HD-Poster-FilmSpell_1-990x556.jpg");
+  background-size: 200px 70px;
+}
+
+.screen__toy-story {
+  background-image: url("https://www.hometheaterforum.com/community/media/2019-toy-story-4-poster.5845/full");
+  background-size: 200px 70px;
+}
+
+.screen__lion-king {
+  background-image: url("https://www.wdwinfo.com/wp-content/uploads/2019/02/Lion-King-Poster.jpg");
+  background-size: 200px 70px;
 }
 
 .text {

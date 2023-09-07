@@ -1,12 +1,30 @@
 const container = document.querySelector('.container');
-const seats = document.querySelectorAll('.row .seat:not(.occupied)');
+const seats = document.querySelectorAll('.row .seat:not(.seat__occupied)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
 
+const screen = document.getElementById('screen');
+
 populateUI();
 
 let ticketPrice = +movieSelect.value;
+
+// Set screen based on current movie - WIP
+// function setScreen(movieIndex) {
+//   if(movieIndex === 0) {
+//     screen.classList.add('screen screen__avengers')
+//   }
+//   if(movieIndex === 1){
+//     screen.classList.add('screen screen__joker')
+//   }
+//   if(movieIndex === 2){
+//     screen.classList.add('screen screen__toy-story')
+//   }
+//   if(movieIndex === 3){
+//     screen.classList.add('screen screen__lion-king')
+//   }
+// }
 
 // Save selected movie index and price
 function setMovieData(movieIndex, moviePrice) {
@@ -16,7 +34,7 @@ function setMovieData(movieIndex, moviePrice) {
 
 // Update total and count
 function updateSelectedCount() {
-  const selectedSeats = document.querySelectorAll('.row .seat.selected');
+  const selectedSeats = document.querySelectorAll('.row .seat.seat__selected');
 
   const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
 
@@ -27,7 +45,7 @@ function updateSelectedCount() {
   count.innerText = selectedSeatsCount;
   total.innerText = selectedSeatsCount * ticketPrice;
   
-  setMovie(movieSelect.selectedIndex, movieSelect.value);
+  setMovieData(movieSelect.selectedIndex, movieSelect.value);
 }
 
 // Get data from localstorage and populate UI
@@ -37,7 +55,7 @@ function populateUI() {
   if (selectedSeats !== null && selectedSeats.length > 0) {
     seats.forEach((seat, index) => {
       if (selectedSeats.indexOf(index) > -1) {
-        seat.classList.add('selected');
+        seat.classList.add('seat__selected');
       }
     });
   }
@@ -60,9 +78,9 @@ movieSelect.addEventListener('change', e => {
 container.addEventListener('click', e => {
   if (
     e.target.classList.contains('seat') &&
-    !e.target.classList.contains('occupied')
+    !e.target.classList.contains('seat__occupied')
   ) {
-    e.target.classList.toggle('selected');
+    e.target.classList.toggle('seat__selected');
 
     updateSelectedCount();
   }
