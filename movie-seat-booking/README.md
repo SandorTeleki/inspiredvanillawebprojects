@@ -16,4 +16,5 @@ Design inspiration from [Dribbble](https://dribbble.com/shots/3628370-Movie-Seat
 ##Changes: 
 - Refactor CSS to BEM style
 - Updated JS to use the new BEM style classes
-- Minor visual CSS changes 
+- Minor visual CSS changes
+- Movie screen now displays poster for selected movie

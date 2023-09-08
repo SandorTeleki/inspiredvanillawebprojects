@@ -7,24 +7,41 @@ const movieSelect = document.getElementById('movie');
 const screen = document.getElementById('screen');
 
 populateUI();
+//document.addEventListener("DOMContentLoaded", populateScreen);
 
 let ticketPrice = +movieSelect.value;
 
-// Set screen based on current movie - WIP
-// function setScreen(movieIndex) {
-//   if(movieIndex === 0) {
-//     screen.classList.add('screen screen__avengers')
-//   }
-//   if(movieIndex === 1){
-//     screen.classList.add('screen screen__joker')
-//   }
-//   if(movieIndex === 2){
-//     screen.classList.add('screen screen__toy-story')
-//   }
-//   if(movieIndex === 3){
-//     screen.classList.add('screen screen__lion-king')
-//   }
-// }
+// Set screen based on current movie 
+function setScreen(movieIndex) {
+  if(movieIndex === 0) {
+    screen.classList.add('screen__avengers')
+  }
+  if(movieIndex === 1){
+    screen.classList.add('screen__joker')
+  }
+  if(movieIndex === 2){
+    screen.classList.add('screen__toy-story')
+  }
+  if(movieIndex === 3){
+    screen.classList.add('screen__lion-king')
+  }
+}
+
+// Remove screen class when swapping to another movie (to avoid CSS issues)
+function removeScreen(movieIndex) {
+  if(movieIndex !== 0) {
+    screen.classList.remove('screen__avengers')
+  }
+  if(movieIndex !== 1){
+    screen.classList.remove('screen__joker')
+  }
+  if(movieIndex !== 2){
+    screen.classList.remove('screen__toy-story')
+  }
+  if(movieIndex !== 3){
+    screen.classList.remove('screen__lion-king')
+  }
+}
 
 // Save selected movie index and price
 function setMovieData(movieIndex, moviePrice) {
@@ -67,11 +84,34 @@ function populateUI() {
   }
 }
 
+// Populate Screen function (to have screen come loaded with a movie picture)
+function populateScreen() {
+  const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+  const screen = document.getElementById('screen');
+
+  if(selectedMovieIndex === 0) {
+    screen.classList.add('screen__avengers')
+  }
+  if(selectedMovieIndex === 1){
+    screen.classList.add('screen__joker')
+  }
+  if(selectedMovieIndex === 2){
+    screen.classList.add('screen__toy-story')
+  }
+  if(selectedMovieIndex === 3){
+    screen.classList.add('screen__lion-king')
+  }
+  console.log(selectedMovieIndex);
+  console.log(screen);
+}
+
 // Movie select event
 movieSelect.addEventListener('change', e => {
   ticketPrice = +e.target.value;
   setMovieData(e.target.selectedIndex, e.target.value);
   updateSelectedCount();
+  removeScreen(e.target.selectedIndex);
+  setScreen(e.target.selectedIndex);
 });
 
 // Seat click event
