@@ -13,6 +13,8 @@ function toggleVideoStatus() {
   }
 }
 
+// Add ability to pause video by pressing space
+
 // update play/pause icon
 function updatePlayIcon() {
   if (video.paused) {
@@ -32,10 +34,11 @@ function updateProgress() {
     mins = '0' + String(mins);
   }
 
-  // Get Seconds
+  // Get seconds
   let secs = Math.floor(video.currentTime % 60);
   if(secs < video.duration){
-    secs = '0' + String(secs);
+    // secs = '0' + String(secs); - need to refactor, since this doesn't round off seconds (allows you to have 00:010 seconds etc.)
+    secs = secs.toString().padStart(2, "0"); //padstart allows to set size to 2 digits
   }
 
   timestamp.innerHTML = `${mins}:${secs}`;

@@ -12,4 +12,7 @@ Custom video player using the HTML5 video element and it's JavaScript API with a
 - Display time in mins and seconds
 
 ## Changes 
-- WIP
+- Fully converted CSS to use BEM methodology
+- Fixed seconds appearing as three digits after 10 seconds elapsed
+- Added aria-label values to play/stop buttons for accessibility purposes
+- Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, changed screen width/height etc.)
