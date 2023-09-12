@@ -32,7 +32,7 @@
 .screen {
   cursor: pointer;
   width: 60%;
-  max-height: 500px; 
+  max-height: 600px; 
   background-color: #000 !important;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -83,5 +83,6 @@
   .screen,
   .controls {
     width: 90%;
+    height: 90%;
   }
 }

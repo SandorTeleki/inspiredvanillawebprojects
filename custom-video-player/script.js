@@ -66,3 +66,15 @@ play.addEventListener('click', toggleVideoStatus);
 stop.addEventListener('click', stopVideo);
 
 progress.addEventListener('change', setVideoProgress);
+// Press 'space' to play/pause video. Using 'k' just like YouTube does
+document.addEventListener("keydown", (e) => {
+  if (e.code === 'Space' || e.key === 'k'){
+    toggleVideoStatus();
+  }
+})
+// Press 's' to stop the video (and return to 0:00)
+document.addEventListener("keydown", (e) => {
+  if (e.key === 's'){
+    stopVideo();
+  }
+})

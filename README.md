@@ -15,4 +15,7 @@ https://sandorteleki.github.io/inspiredvanillawebprojects/formvalidator/index.ht
 ## Movie Seat Booking:
 https://sandorteleki.github.io/inspiredvanillawebprojects/movie-seat-booking/index.html
 
+## Custom Video Player
+https://sandorteleki.github.io/inspiredvanillawebprojects/custom-video-player/index.html
+
 ## Next project:
