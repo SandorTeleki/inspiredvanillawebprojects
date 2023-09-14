@@ -13,7 +13,7 @@ Display movie choices and seats in a theater to select from in order to purchase
 
 Design inspiration from [Dribbble](https://dribbble.com/shots/3628370-Movie-Seat-Booking)
 
-##Changes: 
+## Changes: 
 - Refactor CSS to BEM style
 - Updated JS to use the new BEM style classes
 - Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, etc.)

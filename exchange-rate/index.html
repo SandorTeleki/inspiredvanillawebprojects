@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
     <title>Exchange Rate Calculator</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="body">
+    <header class="header">
+      <a class="header__title" href="../">Return to Main Page</a>
+    </header>
     <img src="img/money.png" alt="" class="money-img" />
-    <h1>Exchange Rate Calculator</h1>
-    <p>Choose the currency and the amounts to get the exchange rate</p>
-
+    <h1 class="page__title">Exchange Rate Calculator</h1>
+    <p class="page__description">Choose the currency and the amounts to get the exchange rate</p>
     <div class="container">
       <div class="currency">
-        <select id="currency-one">
+        <select class="currency__select" id="currency-one">
           <option value="AED">AED</option>
           <option value="ARS">ARS</option>
           <option value="AUD">AUD</option>
@@ -68,7 +71,7 @@
           <option value="VND">VND</option>
           <option value="ZAR">ZAR</option>
         </select>
-        <input type="number" id="amount-one" placeholder="0" value="1" />
+        <input class="currency__input" type="number" id="amount-one" placeholder="0" value="1" />
       </div>
 
       <div class="swap-rate-container">
@@ -79,7 +82,7 @@
       </div>
 
       <div class="currency">
-        <select id="currency-two">
+        <select class="currency__select" id="currency-two">
           <option value="AED">AED</option>
           <option value="ARS">ARS</option>
           <option value="AUD">AUD</option>
@@ -133,7 +136,7 @@
           <option value="VND">VND</option>
           <option value="ZAR">ZAR</option>
         </select>
-        <input type="number" id="amount-two" placeholder="0" />
+        <input class="currency__input" type="number" id="amount-two" placeholder="0" />
       </div>
     </div>
 
