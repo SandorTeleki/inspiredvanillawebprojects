@@ -12,7 +12,8 @@ Select countries to get the exchange rate for a specific amount
 
 ## Changes:
 - Refactor CSS to BEM style
-- Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, etc.)
+- Minor HTML/CSS tweaks (header navigation to return to main page, footer link to API, tweaked some colors, etc.)
+- 
 
 ## To Do:
 - Check if input gets truncated at long numbers (maybe add commas or periods to make long numbers easier to see?)

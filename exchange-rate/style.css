@@ -3,7 +3,7 @@
 }
 
 .body {
-  background-color: #f4f4f4;
+  background-color: #d5d3d3;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,6 @@
   justify-content: center;
   height: 100vh;
   margin: 0;
-  padding: 20px;
 }
 
 .header{
@@ -25,7 +24,6 @@
 
 .header__title:hover{
   color: #3498db;
-  text-decoration-line: underline;
 }
 
 .page__title {
@@ -49,8 +47,13 @@
   width: 150px;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .currency {
-  padding: 40px 0;
+  padding-top: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,6 +71,11 @@
   background-position: right 10px top 50%, 0, 0;
   background-size: 12px auto, 100%;
   background-repeat: no-repeat;
+}
+
+.currency__name {
+  font-size: 12px;
+  padding: 10px;
 }
 
 .currency__input {
@@ -93,6 +101,21 @@ select:focus,
 input:focus,
 button:focus {
   outline: 0;
+}
+
+.footer__information {
+  color: var(--primary-color);
+  margin-top: 150px;
+}
+
+.footer__hyperlink {
+  text-decoration: none;
+  color: var(--primary-color)
+}
+
+.footer__hyperlink:hover {
+  cursor: pointer;
+  color: #3498db;
 }
 
 @media (max-width: 600px) {
