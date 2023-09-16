@@ -13,9 +13,8 @@ Select countries to get the exchange rate for a specific amount
 ## Changes:
 - Refactor CSS to BEM style
 - Minor HTML/CSS tweaks (header navigation to return to main page, footer link to API, tweaked some colors, etc.)
-- 
+- Created function to display full name of selected currencies
 
-## To Do:
-- Check if input gets truncated at long numbers (maybe add commas or periods to make long numbers easier to see?)
-- List out name of the selected currency below it. So EUR becomes Euro (so people know)
-- 
+## Possible future improvements:
+- Refactor currency full name display function
+- Add other (new) currencies supported by the API
