@@ -90,8 +90,34 @@ function calculate() {
       const rate = data.rates[currency_two] / data.rates[currency_one];
       rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
       amountEl_two.value = (amountEl_one.value * (rate)).toFixed(2);
+
       getCurrencyDescriptionOne(currency_one);
       getCurrencyDescriptionTwo(currency_two);
+
+      // const transformAmountOne = +amountEl_one.value;
+      // const transformAmountTwo = +amountEl_two.value;
+      // function modifyData(){
+      //   document.getElementById('amount-one').value = formatMoney(transformAmountOne);
+      //   document.getElementById('amount-two').value = formatMoney(transformAmountTwo);
+      // }
+      // modifyData();
+      // console.log(transformAmountOne);
+      // console.log(transformAmountTwo)
+
+      // WIP to get proper money formatting working
+      //amountEl_two.innerHTML = `${formatMoney(+amountEl_two.value)}`
+      //amountEl_two.innerText = formatMoney(+amountEl_two.value);
+      //formatMoney(+amountEl_two.value);
+      //console.log(formatMoney(+amountEl_one.value));
+      //amountEl_one.value.setAttribute(value, formatMoney(+amountEl_one.value));
+      //innertext not working as exptected
+
+      // Partially working
+      //console.log(amountEl_one);
+      //console.log(amountEl_one.value); //works
+      //console.log(formatMoney(+amountEl_one.value)); //works as expected, just need to change input stuff
+      //console.log(formatMoney(+amountEl_two.value)); //works as expected, just need to change input stuff
+
     });
 }
 
@@ -110,5 +136,9 @@ swap.addEventListener('click', () => {
   calculate();
 });
 
+// Formats large monetary amounts
+function formatMoney(number) {
+  return number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+}
 
 calculate();
