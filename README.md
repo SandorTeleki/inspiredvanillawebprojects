@@ -12,7 +12,7 @@ https://sandorteleki.github.io/inspiredvanillawebprojects/
 
 |  #  |            Project             | Live Demo |
 | :-: | :----------------------------: | :-------: |
-| 01  |       [Form Validator](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/form-validator)       | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/formvalidator/index.html)  |
+| 01  |       [Form Validator](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/form-validator)       | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/form-validator/index.html)  |
 | 02  |     [Movie Seat Booking](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/movie-seat-booking)    | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/movie-seat-booking/index.html)  |
 | 03  |    [Custom Video Player](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/custom-video-player)     | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/custom-video-player/index.html)  |
 | 04  |  [Exchange Rate Calculator](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/exchange-rate)  | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/exchange-rate/index.html)  |
