@@ -110,7 +110,8 @@ function calculate() {
       //formatMoney(+amountEl_two.value);
       //console.log(formatMoney(+amountEl_one.value));
       //amountEl_one.value.setAttribute(value, formatMoney(+amountEl_one.value));
-      //innertext not working as exptected
+      //innertext will not work, since there is no place to add an innertext to, need to use value
+      // https://stackoverflow.com/questions/20604299/what-is-innerhtml-on-input-elements
 
       // Partially working
       //console.log(amountEl_one);

@@ -12,8 +12,8 @@ Project to teach high order array methods and DOM manipulation
 - Use reduce() to add all wealth
 
 ## Changes 
-
-## To Do:
 - Fully converted CSS to use BEM methodology
 - Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, changed screen width/height etc.)
+
+## To Do:
 - Show poorest to richest (reverse list)

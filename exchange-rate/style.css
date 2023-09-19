@@ -13,8 +13,8 @@
   margin: 0;
 }
 
-.header{
-  margin: 20px 0 100px;
+.header {
+  padding-bottom: 40px;
 }
 
 .header__title{

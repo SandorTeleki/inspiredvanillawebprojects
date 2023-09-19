@@ -55,7 +55,7 @@ function calculateWealth() {
   const wealth = data.reduce((acc, user) => (acc += user.money), 0);
 
   const wealthEl = document.createElement('div');
-  wealthEl.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(
+  wealthEl.innerHTML = `<h3 class="total-wealth">Total Wealth: <strong>${formatMoney(
     wealth
   )}</strong></h3>`;
   main.appendChild(wealthEl);
@@ -71,7 +71,7 @@ function addData(obj) {
 // Update DOM
 function updateDOM(providedData = data) {
   // Clear main div
-  main.innerHTML = '<h2><strong>Person</strong> Wealth</h2>';
+  main.innerHTML = '<h2 class="person-name"><strong>Person</strong> Wealth</h2>';
 
   providedData.forEach(item => {
     const element = document.createElement('div');
