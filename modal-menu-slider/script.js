@@ -38,3 +38,10 @@ close.addEventListener('click', () => modal.classList.remove('show-modal'));
 window.addEventListener('click', e =>
   e.target == modal ? modal.classList.remove('show-modal') : false
 );
+
+// Hide modal on ESC press
+window.addEventListener("keydown", (event)=>{
+  if (event.isComposing || event.keyCode === 27) {
+    modal.classList.remove('show-modal');
+  }
+});

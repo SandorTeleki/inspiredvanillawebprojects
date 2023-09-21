@@ -6,14 +6,11 @@
   --secondary-color: #be2edd;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
+.body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
 body.show-nav {
@@ -78,14 +75,15 @@ header {
   text-align: center;
 }
 
-header h1 {
+.header__title {
   margin: 0;
 }
 
-header p {
+.header__subtitle {
   margin: 30px 0;
 }
 
+/* Refactor this */
 button,
 input[type='submit'] {
   background-color: var(--secondary-color);
@@ -148,33 +146,36 @@ button:focus {
   animation-duration: var(--modal-duration);
 }
 
-.modal-header {
+.modal__header {
   background: var(--primary-color);
   color: #fff;
   padding: 15px;
 }
 
-.modal-header h3 {
+.modal-form__header {
   margin: 0;
   border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: center;
 }
 
 .modal-content {
   padding: 20px;
 }
 
-.modal-form div {
+.modal-form__input-groups {
   margin: 15px 0;
 }
 
-.modal-form label {
+.modal-form__label {
   display: block;
   margin-bottom: 5px;
 }
 
-.modal-form .form-input {
+.form__input {
   padding: 8px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .close-btn {
@@ -184,6 +185,24 @@ button:focus {
   top: 0;
   right: 0;
 }
+
+.footer {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__navigation {
+  color: #3d3b3b;
+  text-decoration: none;
+}
+  
+.footer__navigation:hover {
+  color: #3498db;
+  text-decoration-line: underline;
+}
+
+
 
 @keyframes modalopen {
   from {

@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
     <title>My Landing Page</title>
   </head>
-  <body>
+  <body class="body">
     <nav id="navbar">
-      <div class="logo">
-        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user" />
+      <div class="navbar__logo">
+        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user">
       </div>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact Me</a></li>
+        <li><a href="../">Home</a></li>
+        <li><a href="https://github.com/SandorTeleki">Portfolio</a></li>
+        <li><a href="https://github.com/SandorTeleki">Blog</a></li>
+        <li><a href="https://github.com/SandorTeleki">Contact Me</a></li>
       </ul>
     </nav>
 
@@ -30,57 +26,55 @@
       <button id="toggle" class="toggle">
         <i class="fa fa-bars fa-2x"></i>
       </button>
-
-      <h1>My Landing Page</h1>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, amet!
-      </p>
-
-      <button class="cta-btn" id="open">Sign Up</button>
+      <h1 class="header__title">My Landing Page</h1>
+        <p class="header__subtitle">
+          Who needs lorem, when they can just type away endlessly and pointlessly?
+        </p>
+        <button class="cta-btn" id="open">Sign Up</button>
     </header>
 
     <div class="container">
       <h2>What is this landing page about?</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure
-        accusamus ab consectetur eos provident ipsa est perferendis architecto.
-        Provident, quaerat asperiores. Quo esse minus repellat sapiente, impedit
-        obcaecati necessitatibus.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente optio
-        officia ipsa. Cum dignissimos possimus et non provident facilis saepe!
-      </p>
+        <p>
+          This landing page is about how you can type away without a care in
+          the world just so that you can avoid having to insert lorem text that
+          will throw you a W3C validation error, if you don't change the language 
+          setting of the html tag from "en" to "zxx".
+        </p>
+        <p>
+          Here, I only need to type about a line and a half of text to avoid issues 
+          with lorem, but even that can get hard after a while. The things we do to avoid 
+          W3C validation errors...
+        </p>
 
       <h2>Tell Me More</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat eaque
-        delectus explicabo qui reprehenderit? Aspernatur ad similique minima
-        accusamus maiores accusantium libero autem iusto reiciendis ullam
-        impedit esse quibusdam, deleniti laudantium rerum beatae, deserunt nemo
-        neque, obcaecati exercitationem sit. Earum.
-      </p>
-
+        <p>
+          Telling you more without reverting back to lorem is definitely a challenge, since
+          it was so easy to just type "lorem30" or "lorem50" to fill paragraphs to a desired length. 
+          Instead of that, I get to write in a stream of conciousness style to try to make the
+          output and my experience of producing that output more manageable. 
+        </p>
       <h2>Benefits</h2>
-      <ul>
-        <li>Lifetime Access</li>
-        <li>30 Day Money Back</li>
-        <li>Tailored Customer Support</li>
-      </ul>
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quam
-        nostrum, fugiat, itaque natus officia laborum dolorum id accusantium
-        culpa architecto tenetur fuga? Consequatur provident rerum eius ratione
-        dolor officiis doloremque minima optio dignissimos doloribus odio
-        debitis vero cumque itaque excepturi a neque, expedita nulla earum
-        accusamus repellat adipisci veritatis quam. Ipsum fugiat iusto pariatur
-        consectetur quas libero dolor dolores dolorem, nostrum ducimus
-        doloremque placeat accusamus iste, culpa quaerat consequatur?
-      </p>
+        <ul>
+          <li>Lifetime Access</li>
+          <li>30 Day Money Back</li>
+          <li>Tailored Customer Support</li>
+          <li>No W3C validation errors!</li>
+        </ul>
+        <p>
+          Now I get to the longest chunk of lorem text. It took up eight lines in the IDE 
+          and it takes up almost five full lines in the website itself (at least at my current
+          screen-width). But I have no fear, I know that with determination and hard-work I can 
+          replace lorem text with equally meaningless English text! That being said, I do hope
+          that there is at least some semblance of meaning in everything I wrote here. This reminds
+          me that I could even hide an easter egg somewhere on this page. And to make it easy, I'll
+          even say what to look for. It will be commented out but visible in the html of this page. 
+        </p>
+        <!-- If you are ever in Budapest, hit me up and the first round of beers is on me! -->
     </div>
+    <footer class="footer">
+      <a class="footer__navigation" href="../">Return to Main Page</a>
+    </footer>
 
     <!-- Modal -->
     <div class="modal-container" id="modal">
@@ -88,49 +82,29 @@
         <button class="close-btn" id="close">
           <i class="fa fa-times"></i>
         </button>
-        <div class="modal-header">
-          <h3>Sign Up</h3>
+        <div class="modal__header">
+          <h3 class="modal-form__header">Sign Up</h3>
         </div>
         <div class="modal-content">
-          <p>Register with us to get offers, support and more</p>
+          <p>Register with us to get offers, support and more!</p>
           <form class="modal-form">
-            <div>
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Enter Name"
-                class="form-input"
-              />
+            <div class="modal-form__input-groups">
+              <label class="modal-form__label" for="name">Name</label>
+              <input type="text" id="name" placeholder="Enter Name" class="form__input">
             </div>
-            <div>
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter Email"
-                class="form-input"
-              />
+            <div class="modal-form__input-groups">
+              <label class="modal-form__label" for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter Email" class="form__input">
             </div>
-            <div>
-              <label for="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                placeholder="Enter Password"
-                class="form-input"
-              />
+            <div class="modal-form__input-groups">
+              <label class="modal-form__label" for="password">Password</label>
+              <input type="password" id="password" placeholder="Enter Password" class="form__input">
             </div>
-            <div>
-              <label for="password2">Confirm Password</label>
-              <input
-                type="password"
-                id="password2"
-                placeholder="Confirm Password"
-                class="form-input"
-              />
+            <div class="modal-form__input-groups">
+              <label class="modal-form__label" for="password2">Confirm Password</label>
+              <input type="password" id="password2" placeholder="Confirm Password" class="form__input">
             </div>
-            <input type="submit" value="Submit" class="submit-btn" />
+            <input type="submit" value="Submit" class="submit-btn">
           </form>
         </div>
       </div>
