@@ -88,7 +88,7 @@ function calculate() {
     .then(data => {
       //console.log(data); 
       const rate = data.rates[currency_two] / data.rates[currency_one];
-      rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`;
+      rateEl.innerText = `1 ${currency_one} = ${Number(rate.toPrecision(3))} ${currency_two}`;
       amountEl_two.value = (amountEl_one.value * (rate)).toFixed(2);
 
       getCurrencyDescriptionOne(currency_one);
@@ -115,9 +115,9 @@ function calculate() {
 
       // Partially working
       //console.log(amountEl_one);
-      //console.log(amountEl_one.value); //works
-      //console.log(formatMoney(+amountEl_one.value)); //works as expected, just need to change input stuff
-      //console.log(formatMoney(+amountEl_two.value)); //works as expected, just need to change input stuff
+      console.log(amountEl_one.value); //works
+      console.log(formatMoney(+amountEl_one.value)); //works as expected, just need to change input stuff
+      console.log(formatMoney(+amountEl_two.value)); //works as expected, just need to change input stuff
 
     });
 }
