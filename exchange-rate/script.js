@@ -115,9 +115,9 @@ function calculate() {
 
       // Partially working
       //console.log(amountEl_one);
-      console.log(amountEl_one.value); //works
-      console.log(formatMoney(+amountEl_one.value)); //works as expected, just need to change input stuff
-      console.log(formatMoney(+amountEl_two.value)); //works as expected, just need to change input stuff
+      //console.log(amountEl_one.value); //works
+      //console.log(formatMoney(+amountEl_one.value)); //works as expected, just need to change input stuff
+      //console.log(formatMoney(+amountEl_two.value)); //works as expected, just need to change input stuff
 
     });
 }

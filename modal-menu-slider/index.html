@@ -10,27 +10,27 @@
     <title>My Landing Page</title>
   </head>
   <body class="body">
-    <nav id="navbar">
+    <nav class="navbar" id="navbar" >
       <div class="navbar__logo">
-        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user">
+        <img class="navbar__profile-picture" src="https://randomuser.me/api/portraits/men/76.jpg" alt="user">
       </div>
-      <ul>
-        <li><a href="../">Home</a></li>
-        <li><a href="https://github.com/SandorTeleki">Portfolio</a></li>
-        <li><a href="https://github.com/SandorTeleki">Blog</a></li>
-        <li><a href="https://github.com/SandorTeleki">Contact Me</a></li>
+      <ul class="navbar__menu">
+        <li class="navbar__link" ><a class="navbar__url" href="../">Home (Main Page)</a></li>
+        <li class="navbar__link" ><a class="navbar__url" href="https://github.com/SandorTeleki">Portfolio (GitHub)</a></li>
+        <li class="navbar__link" ><a class="navbar__url" href="https://github.com/SandorTeleki">Blog (GitHub)</a></li>
+        <li class="navbar__link" ><a class="navbar__url" href="https://github.com/SandorTeleki">Contact Me (GitHub)</a></li>
       </ul>
     </nav>
 
-    <header>
-      <button id="toggle" class="toggle">
+    <header class="header">
+      <button id="toggle" class="button toggle">
         <i class="fa fa-bars fa-2x"></i>
       </button>
       <h1 class="header__title">My Landing Page</h1>
         <p class="header__subtitle">
           Who needs lorem, when they can just type away endlessly and pointlessly?
         </p>
-        <button class="cta-btn" id="open">Sign Up</button>
+        <button class="button cta-btn" id="open">Sign Up</button>
     </header>
 
     <div class="container">
@@ -79,7 +79,7 @@
     <!-- Modal -->
     <div class="modal-container" id="modal">
       <div class="modal">
-        <button class="close-btn" id="close">
+        <button class="button close-btn" id="close">
           <i class="fa fa-times"></i>
         </button>
         <div class="modal__header">
@@ -104,7 +104,9 @@
               <label class="modal-form__label" for="password2">Confirm Password</label>
               <input type="password" id="password2" placeholder="Confirm Password" class="form__input">
             </div>
-            <input type="submit" value="Submit" class="submit-btn">
+            <div class="button__container">
+              <input type="submit" value="Submit" class="button submit__button">
+            </div>
           </form>
         </div>
       </div>

@@ -10,8 +10,6 @@ Simple landing page with sliding menu and modal
 - Add functionality to make modal open/close on button click
 
 ## Changes:
-
-## To Do:
 - Fully converted CSS to use BEM methodology
-- Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, changed screen width/height etc.)
-- 
+- Minor CSS tweaks (added footer navigation to return to main page [header already taken by project header/sign up], tweaked some colors, changed screen width/height etc.)
+## To Do:
