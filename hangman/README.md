@@ -13,8 +13,11 @@ Select a letter to figure out a hidden word in a set amount of chances
 - Play again button to reset game
 
 ## Changes:
+- Refactor CSS to BEM style
+- Minor HTML/CSS tweaks (header navigation to return to main page, tweaked some colors, etc.)
 
 
 ## Possible future improvements:
-- Refactor CSS to BEM style
-- Minor HTML/CSS tweaks (header navigation to return to main page, footer link to API, tweaked some colors, etc.)
+- Press enter on popup to play again
+- Have all the words/letters be in uppercase for better visibility
+- Find an API that provides random words

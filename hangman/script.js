@@ -47,8 +47,8 @@ function displayWord() {
 function updateWrongLettersEl() {
 	// Display wrong letters
 	wrongLettersEl.innerHTML = `
-    ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
-    ${wrongLetters.map(letter => `<span>${letter}</span>`)}
+    ${wrongLetters.length > 0 ? '<p class="wrong-letters-container__title">Wrong</p>' : ''}
+    ${wrongLetters.map(letter => `<span class="wrong-letters-container__letters"> ${letter}</span>`)}
   `;
 
 	// Display parts
