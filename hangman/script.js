@@ -6,9 +6,21 @@ const notification = document.getElementById('notification-container');
 const finalMessage = document.getElementById('final-message');
 const finalMessageRevealWord = document.getElementById('final-message-reveal-word');
 
+getRandomWord();
+
 const figureParts = document.querySelectorAll('.figure-part');
 
 const words = ['application', 'programming', 'interface', 'wizard'];
+
+async function getRandomWord() {
+	fetch("https://random-word-api.herokuapp.com/word?number=4")
+    .then(res => res.json())
+    .then(data => {
+		words.splice(0, words.length, ...data)
+		console.log(words)
+		console.log(data)
+	})
+}
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -122,7 +134,10 @@ playAgainBtn.addEventListener('click', () => {
 
 	updateWrongLettersEl();
 
+	getRandomWord();
+
 	popup.style.display = 'none';
 });
+
 
 displayWord();

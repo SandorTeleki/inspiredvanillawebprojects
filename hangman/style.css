@@ -1,6 +1,6 @@
 .body {
   box-sizing: border-box;
-  background-color: #34495e;
+  background-color: #345e41;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -73,7 +73,7 @@
 }
 
 .letter {
-  border-bottom: 3px solid #2980b9;
+  border-bottom: 3px solid #13e73e;
   display: inline-flex;
   font-size: 30px;
   align-items: center;
@@ -137,4 +137,19 @@
 
 .show {
   transform: translateY(-50px);
+}
+
+.footer__information {
+  color: var(--primary-color);
+  margin-top: 150px;
+}
+
+.footer__hyperlink {
+  text-decoration: none;
+  color: var(--primary-color)
+}
+
+.footer__hyperlink:hover {
+  cursor: pointer;
+  color: #3498db;
 }
