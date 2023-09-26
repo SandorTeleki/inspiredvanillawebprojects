@@ -9,3 +9,11 @@ Search and generate random meals from the [themealdb.com](https://www.themealdb.
 - Display meals in DOM with image and hover effect
 - Click on meal and see the details
 - Click on generate button and fetch & display a random meal
+
+## Changes:
+
+## To Do:
+- Fully converted CSS to use BEM methodology
+- Updated JS to user new BEM classes and not rely on stacking specificity
+- Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, etc.)
+- Fix picture overlay margins
