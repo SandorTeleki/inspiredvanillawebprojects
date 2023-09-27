@@ -17,12 +17,12 @@
       <h1 class="page__title">Meal Finder</h1>
       <div class="flex">
         <form class="flex" id="submit">
-          <input type="text" id="search" placeholder="Search for meals or keywords">
-          <button class="search-btn" type="submit">
+          <input class="input" type="text" id="search" placeholder="Search for meals or keywords">
+          <button class="search-btn button" type="submit">
             <i class="fas fa-search"></i>
           </button>
         </form>
-        <button class="random-btn" id="random">
+        <button class="random-btn button" id="random">
           <i class="fas fa-random"></i>
         </button>
       </div>
@@ -32,6 +32,10 @@
       <div id="single-meal"></div>
     </div>
 
+        <!-- Footer with link to MealDB  API -->
+        <footer>
+          <div class="footer__information">Meals provided by: <a class="footer__hyperlink" href="https://www.themealdb.com"> The MealDB API</a></div>
+        </footer>
     <script src="script.js"></script>
   </body>
 </html>
