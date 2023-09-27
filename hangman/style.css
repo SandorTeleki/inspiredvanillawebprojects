@@ -57,11 +57,13 @@
 }
 
 .wrong-letters-container__title {
-  margin: 0 0 5px;
+  margin: 0 0 15px;
 }
 
 .wrong-letters-container__letters {
   font-size: 24px;
+  text-transform: uppercase;
+
 }
 
 .word {
@@ -81,6 +83,7 @@
   margin: 0 3px;
   height: 50px;
   width: 20px;
+  text-transform: uppercase;
 }
 
 .popup-container {

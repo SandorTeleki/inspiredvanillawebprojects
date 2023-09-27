@@ -17,8 +17,8 @@ async function getRandomWord() {
     .then(res => res.json())
     .then(data => {
 		words.splice(0, words.length, ...data)
-		console.log(words)
-		console.log(data)
+		//console.log(words) - Use for debugging
+		//console.log(data) - Use for debugging
 	})
 }
 
@@ -44,7 +44,7 @@ function displayWord() {
 			.join('')}
   `;
 
-	const innerWord = wordEl.innerText.replace(/[ \n]/g, '');
+	const innerWord = wordEl.innerText.toLowerCase().replace(/[ \n]/g, '');
 
 	if (innerWord === selectedWord) {
 		finalMessage.innerText = 'Congratulations! You won! 😃';
@@ -59,7 +59,7 @@ function displayWord() {
 function updateWrongLettersEl() {
 	// Display wrong letters
 	wrongLettersEl.innerHTML = `
-    ${wrongLetters.length > 0 ? '<p class="wrong-letters-container__title">Wrong</p>' : ''}
+    ${wrongLetters.length > 0 ? '<p class="wrong-letters-container__title">Wrong Letters:</p>' : ''}
     ${wrongLetters.map(letter => `<span class="wrong-letters-container__letters"> ${letter}</span>`)}
   `;
 
