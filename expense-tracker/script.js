@@ -57,9 +57,10 @@ function addTransactionDOM(transaction) {
   const sign = transaction.amount < 0 ? '-' : '+';
 
   const item = document.createElement('li');
+  item.classList.add("list-item")
 
   // Add class based on value
-  item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
+  item.classList.add(transaction.amount < 0 ? "money-minus-border" : "money-plus-border");
 
   item.innerHTML = `
     ${transaction.text} <span>${sign}${Math.abs(
