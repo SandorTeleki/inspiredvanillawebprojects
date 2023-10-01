@@ -116,6 +116,10 @@ function init() {
   updateValues();
 }
 
+function formatNumber (number) {
+  return number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+}
+
 init();
 
 form.addEventListener('submit', addTransaction);
