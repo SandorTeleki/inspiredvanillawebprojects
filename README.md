@@ -32,3 +32,4 @@ https://sandorteleki.github.io/inspiredvanillawebprojects/
 | 18  |     [New Year Countdown](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/new-year-countdown)   | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/new-year-countdown/index.html)  |
 | 19  |       [Sortable List](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/sortable-list)       | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/sortable-list/index.html)  |
 | 20  | [Speak Number Guessing Game](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/speak-number-guess) | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/speak-number-guess/index.html)  |
+| 21 | [Fizz Buzz](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/fizz-buzz) | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/fizz-buzz/index.html)  |
