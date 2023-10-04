@@ -10,9 +10,9 @@ Create beautiful UI to play music stored in the "music folder" using the HTML5 a
 - Progress bar
 
 ## Changes:
-- Fully converted CSS to use BEM methodology
-- Added aria-label values to play/stop, previous/fast foward buttons for accessibility purposes
-- Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, changed screen width/height etc.)
+- Refactor CSS to BEM style
+- Minor HTML/CSS tweaks (header navigation to return to main page, footer link to API, tweaked some colors, etc.)
+- Created function to display full name of selected currencies
 - Play/Pause with space bar
 
 ## To Do:
