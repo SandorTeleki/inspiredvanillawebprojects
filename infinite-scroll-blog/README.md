@@ -10,9 +10,8 @@ Display blog posts from [jsonplaceholder](https://jsonplaceholder.typicode.com) 
 - Add filtering for fetched posts
 
 ## Changes:
-
-## To Do:
 - Refactor CSS to BEM style
 - Minor HTML/CSS tweaks (header navigation to return to main page, footer link to API, tweaked some colors, etc.)
-- Created function to display full name of selected currencies
 - Button to jump to the top of the page
+
+## To Do:
