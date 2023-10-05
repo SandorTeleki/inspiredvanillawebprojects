@@ -66,6 +66,10 @@
   border: 0;
 }
 
+.filter:focus {
+  outline: 0;
+}
+
 .post {
   position: relative;
   background-color: #4992d3;
