@@ -18,4 +18,5 @@ Game to beat the clock by typing random words
 - Minor HTML/CSS tweaks (header navigation to return to main page, footer link to API, tweaked some colors, etc.)
 - High score (saved to local storage)
 - Bonus score if you accumulate enough extra time
-- 
+- Style settings button, reload button, and drop down menu
+- Move 'return to main page' below top settings bar
