@@ -12,11 +12,9 @@ Game to beat the clock by typing random words
 - Store difficulty setting in local storage
 
 ## Changes
+- Refactor CSS to BEM style
+- Minor HTML/CSS tweaks (header navigation to return to main page, buttons, input field, tweaked some colors, etc.)
 
 ## To Do
-- Refactor CSS to BEM style
-- Minor HTML/CSS tweaks (header navigation to return to main page, footer link to API, tweaked some colors, etc.)
 - High score (saved to local storage)
 - Bonus score if you accumulate enough extra time
-- Style settings button, reload button, and drop down menu
-- Move 'return to main page' below top settings bar
