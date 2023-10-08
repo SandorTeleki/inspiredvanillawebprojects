@@ -11,7 +11,8 @@ Display blog posts from [jsonplaceholder](https://jsonplaceholder.typicode.com) 
 
 ## Changes:
 - Refactor CSS to BEM style
-- Minor HTML/CSS tweaks (header navigation to return to main page, footer link to API, tweaked some colors, etc.)
+- Minor HTML/CSS tweaks (header navigation to return to main page, header link to API, tweaked some colors, etc.)
 - Button to jump to the top of the page
 
 ## To Do:
+- Refactor jump to top button

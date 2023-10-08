@@ -18,3 +18,4 @@ Game to beat the clock by typing random words
 ## To Do
 - High score (saved to local storage)
 - Bonus score if you accumulate enough extra time
+- Use random word API to get random words for array

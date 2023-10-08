@@ -11,10 +11,10 @@ Create beautiful UI to play music stored in the "music folder" using the HTML5 a
 
 ## Changes:
 - Refactor CSS to BEM style
-- Minor HTML/CSS tweaks (header navigation to return to main page, footer link to API, tweaked some colors, etc.)
-- Created function to display full name of selected currencies
+- Minor HTML/CSS tweaks (header navigation to return to main page, tweaked some colors, etc.)
 - Play/Pause with space bar
 
 ## To Do:
 - Shuffle button? (makes more sense if there are more songs)
-- Drop down list of available songs?
+- Drop down list of available songs
+- Change navigation UI
