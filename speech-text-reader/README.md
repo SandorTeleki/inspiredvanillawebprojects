@@ -11,5 +11,8 @@ A text to speech app for non-verbal people. Pre-made buttons and custom text spe
 - Change voices and accents
 
 ## Changes:
+- Fully converted CSS to use BEM methodology
+- Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, changed screen width/height etc.)
+- Press "Esc" to close popup text box
 
 ## To Do:

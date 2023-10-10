@@ -67,7 +67,7 @@ function createBox(item) {
   box.classList.add('box');
 
   box.innerHTML = `
-    <img src="${image}" alt="${text}" />
+    <img class="box__image" src="${image}" alt="${text}" />
     <p class="info">${text}</p>
   `;
 
@@ -129,6 +129,13 @@ toggleBtn.addEventListener('click', () =>
 closeBtn.addEventListener('click', () =>
   document.getElementById('text-box').classList.remove('show')
 );
+
+// Close text box by pressinc escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === 'Escape'){
+    document.getElementById('text-box').classList.remove('show')
+  }
+})
 
 // Change voice
 voicesSelect.addEventListener('change', setVoice);
