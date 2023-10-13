@@ -12,10 +12,12 @@ Flash card app for learning. Display, add and remove memory cards with questions
 - Clear all cards from local storage
 
 ## Changes:
-
-## To Do:
 - Fully converted CSS to use BEM methodology
 - Updated JS to user new BEM classes and not rely on stacking specificity
 - Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, etc.)
-- Alert if answer/question are empty
-- Delete button for each card
+- Navigation with arrow keys between cards
+- Added alert in case question and/or answer text box were left blank
+
+## To Do:
+- Refactor all the button classes 
+- Delete button for each card (remove card from array and DOM, then resave the array to local storage)

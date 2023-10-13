@@ -19,21 +19,6 @@ const cardsEl = [];
 // Store card data
 const cardsData = getCardsData();
 
-// const cardsData = [
-//   {
-//     question: 'What must a variable begin with?',
-//     answer: 'A letter, $ or _'
-//   },
-//   {
-//     question: 'What is a variable?',
-//     answer: 'Container for a piece of data'
-//   },
-//   {
-//     question: 'Example of Case Sensitive Variable',
-//     answer: 'thisIsAVariable'
-//   }
-// ];
-
 // Create all cards
 function createCards() {
   cardsData.forEach((data, index) => createCard(data, index));
@@ -90,12 +75,8 @@ function setCardsData(cards) {
   window.location.reload();
 }
 
-createCards();
-
-// Event listeners
-
-// Next button
-nextBtn.addEventListener('click', () => {
+// Next card function
+function nextCard() {
   cardsEl[currentActiveCard].className = 'card left';
 
   currentActiveCard = currentActiveCard + 1;
@@ -107,10 +88,10 @@ nextBtn.addEventListener('click', () => {
   cardsEl[currentActiveCard].className = 'card active';
 
   updateCurrentText();
-});
+};
 
-// Prev button
-prevBtn.addEventListener('click', () => {
+// Previous card function
+function previousCard() {
   cardsEl[currentActiveCard].className = 'card right';
 
   currentActiveCard = currentActiveCard - 1;
@@ -122,10 +103,34 @@ prevBtn.addEventListener('click', () => {
   cardsEl[currentActiveCard].className = 'card active';
 
   updateCurrentText();
-});
+};
+
+createCards();
+
+
+// EVENT LISTENERS
+
+// Next button
+nextBtn.addEventListener('click', nextCard);
+// Next button through right arrow key
+document.addEventListener("keydown", (e) => {
+  if (e.code === 'ArrowRight'){
+    nextCard();
+  }
+})
+
+// Prev button
+prevBtn.addEventListener('click', previousCard);
+// Prev button through left arrow key
+document.addEventListener("keydown", (e) => {
+  if (e.code === 'ArrowLeft'){
+    previousCard();
+  }
+})
 
 // Show add container
 showBtn.addEventListener('click', () => addContainer.classList.add('show'));
+
 // Hide add container
 hideBtn.addEventListener('click', () => addContainer.classList.remove('show'));
 
@@ -146,6 +151,8 @@ addCardBtn.addEventListener('click', () => {
 
     cardsData.push(newCard);
     setCardsData(cardsData);
+  } else {
+    alert("Question and/or answer field cannot be empty!")
   }
 });
 
