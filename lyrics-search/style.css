@@ -45,6 +45,7 @@
     background-color: rgba(0, 0, 0, 0.4);
   }
   
+  /* refactor z-index selector */
   header * {
     z-index: 1;
   }
