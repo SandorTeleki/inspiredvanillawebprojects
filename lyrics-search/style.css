@@ -1,13 +1,3 @@
-*{
-  box-sizing: border-box;
-  /* 
-  pink search button is off 
-  next page button?
-  
-  */
-  
-}
-
 .body {
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -81,6 +71,7 @@
   font-size: 16px;
   padding: 15px 30px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .page__form-button {
@@ -103,6 +94,7 @@
   color: #fff;
   padding: 4px 10px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .songs-list {
