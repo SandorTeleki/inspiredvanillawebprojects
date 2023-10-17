@@ -16,7 +16,7 @@ Find songs, artists and lyrics using the [lyrics.ovh](https://lyrics.ovh) API
 - Fixed original projects button CSS issue (button would increase in size with longer song titles)
 
 ## To Do:
-- Fix API issues (next/previous doesn't work like it previously did)
+- Fix API issues (next/previous doesn't work like it previously did - broken by cors-anywhere changing how it works)
 
 ## Note
 - Oringal API broke - no longer returns lyrics. Ditto for next/previous page functionality. 
