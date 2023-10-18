@@ -130,7 +130,7 @@ closeBtn.addEventListener('click', () =>
   document.getElementById('text-box').classList.remove('show')
 );
 
-// Close text box by pressinc escape
+// Close text box by pressing escape
 document.addEventListener("keydown", (e) => {
   if (e.key === 'Escape'){
     document.getElementById('text-box').classList.remove('show')

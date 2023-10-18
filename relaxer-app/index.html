@@ -8,8 +8,11 @@
     <link rel="shortcut icon" href="#">
     <title>Relaxer</title>
   </head>
-  <body>
-    <h1>Relaxer</h1>
+  <body class="body">
+    <h1 class="page__title">Relaxer</h1>
+    <header class="nav">
+      <a class="nav__title" href="../">Return to Main Page</a>
+    </header>
 
     <div class="container" id="container">
       <div class="circle"></div>
@@ -21,6 +24,11 @@
       </div>
 
       <div class="gradient-circle"></div>
+    </div>
+    <div class="voice-select">
+      <h3 class="text-box__title">Choose Voice</h3>
+      <select class="text-box__select" id="voices"></select>
+      <button class="mute" id="mute">Mute</button>
     </div>
 
     <script src="script.js"></script>
