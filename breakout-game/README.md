@@ -11,3 +11,12 @@ Game where you control a paddle with the arrow keys to bounce a ball up to break
 - Add collision detection
 - Keep score
 - Add rules button with slider
+
+## Changes:
+
+## To Do/Potential future improvements: 
+- Fully converted CSS to use BEM methodology
+- Updated JS to user new BEM classes and not rely on stacking specificity
+- Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, etc.)
+- Add high score functionality
+- Add sticky paddle functionality
