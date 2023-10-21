@@ -67,15 +67,22 @@
 
 .project__info {
     display: flex;
-    margin: 100px;
+    margin: 70px;
     /* Maybe add a max-width? */
 }
 
 .footer {
     display: flex;
-    /* Maybe add a max-width? */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
 }
 
 .footer__author {
-    margin: 0 0 20px 100px;
+    margin: 0;
+}
+
+.footer__copyright {
+    margin: 0;
 }
