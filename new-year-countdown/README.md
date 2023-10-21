@@ -9,3 +9,10 @@ Landing page that counts down from the current date to the next new year
 - Insert values into the DOM
 - Show a spinner right before loading the countdown
 - Show the coming year in the background
+
+## Changes:
+- Fully converted CSS to use BEM methodology
+- Updated JS to user new BEM classes and not rely on stacking specificity
+- Minor CSS tweaks (added navigation to return to main page, tweaked some colors, etc.)
+
+## To Do:
