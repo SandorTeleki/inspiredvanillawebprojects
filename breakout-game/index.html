@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="#">
     <title>Breakout!</title>
   </head>
-  <body>
-    <h1>Breakout!</h1>
+  <body class="body">
+    <h1 class="page__title">Breakout!</h1>
     <button id="rules-btn" class="btn rules-btn">Show Rules</button>
     <div id="rules" class="rules">
       <h2>How To Play:</h2>
@@ -18,11 +18,15 @@
         and break the blocks.
       </p>
       <p>If you miss the ball, your score and the blocks will reset.</p>
-      <button id="close-btn" class="btn">Close</button>
+      <button class="btn close-button" id="close-btn" >Close</button>
     </div>
 
-    <canvas id="canvas" width="800" height="600"></canvas>
+    <canvas class="canvas" id="canvas" width="800" height="600"></canvas>
 
+    <nav class="nav">
+      <a class="nav__title" href="../">Return to Main Page</a>
+    </nav>
+    
     <script src="script.js"></script>
   </body>
 </html>
