@@ -6,19 +6,38 @@
   --text-color: #34444f;
 }
 
-* {
-  box-sizing: border-box;
+.body {
+    background-image: linear-gradient(
+        0deg,
+        rgb(164, 222, 249) 23.8%,
+        rgb(243, 253, 170) 92%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
 }
 
-body {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Lato', sans-serif;
+.page__title {
+    margin: 20px 0 0;
+}
+
+.nav {
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+.nav__title {
+    color: #000;
+    text-decoration: none;
+}
+
+.nav__title:hover {
+    color: #3498db;
+    text-decoration-line: underline;
 }
 
 .draggable-list {
@@ -28,17 +47,18 @@ body {
   list-style-type: none;
 }
 
-.draggable-list li {
+.draggable-list__item {
   background-color: #fff;
   display: flex;
   flex: 1;
+  border: 1px solid #000;
 }
 
-.draggable-list li:not(:last-of-type) {
+.draggable-list__item:not(:last-of-type) {
   border-bottom: 1px solid var(--border-color);
 }
 
-.draggable-list .number {
+.number {
   background-color: var(--background-color);
   display: flex;
   align-items: center;
@@ -48,19 +68,19 @@ body {
   width: 60px;
 }
 
-.draggable-list li.over .draggable {
+.draggable-list .draggable-list__item.over .draggable {
   background-color: #eaeaea;
 }
 
-.draggable-list .person-name {
+.person-name {
   margin: 0 20px 0 0;
 }
 
-.draggable-list li.right .person-name {
+.draggable-list__item.right .person-name {
   color: #3ae374;
 }
 
-.draggable-list li.wrong .person-name {
+.draggable-list__item.wrong .person-name {
   color: #ff3838;
 }
 
@@ -75,11 +95,12 @@ body {
 
 .check-btn {
   background-color: var(--background-color);
-  border: none;
+  border: 1px solid #000;
   color: var(--text-color);
   font-size: 16px;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .check-btn:active {

@@ -2,16 +2,16 @@ const draggable_list = document.getElementById('draggable-list');
 const check = document.getElementById('check');
 
 const richestPeople = [
-  'Jeff Bezos',
-  'Bill Gates',
-  'Warren Buffett',
-  'Bernard Arnault',
-  'Carlos Slim Helu',
-  'Amancio Ortega',
-  'Larry Ellison',
-  'Mark Zuckerberg',
-  'Michael Bloomberg',
-  'Larry Page'
+  'Soviet Union',
+  'United States',
+  'Australia',
+  'Hungary',
+  'Italy',
+  'Sweden',
+  'United Team of Germany',
+  'Great Britain',
+  'Romania',
+  'Japan'
 ];
 
 // Store listitems
@@ -29,6 +29,7 @@ function createList() {
     .map(a => a.value)
     .forEach((person, index) => {
       const listItem = document.createElement('li');
+      listItem.classList.add('draggable-list__item');
 
       listItem.setAttribute('data-index', index);
 
