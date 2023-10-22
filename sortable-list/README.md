@@ -14,7 +14,7 @@ Display a scrambled list that can be sorted with drag and drop
 - Fully converted CSS to use BEM methodology
 - Updated JS to user new BEM classes and not rely on stacking specificity
 - Minor CSS tweaks (added navigation to return to main page, tweaked some colors, etc.)
+- Rearranging correct list items properly updates right/wrong color
 
 ## To Do:
-- Rearranging correct list items does not update right/wrong color correctly
-
+- Refactor dragDrop() so that it doesn't run checkOrder() before the button is clicked

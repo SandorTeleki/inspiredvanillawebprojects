@@ -75,6 +75,7 @@ function dragDrop() {
   swapItems(dragStartIndex, dragEndIndex);
 
   this.classList.remove('over');
+  checkOrder();
 }
 
 // Swap list items that are drag and drop
