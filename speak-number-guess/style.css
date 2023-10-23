@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-body {
+.body {
     background: #2f3542 url('img/bg.jpg') no-repeat left center/cover;
     color: #fff;
     min-height: 100vh;
@@ -15,14 +15,24 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1,
-h3 {
+.page__title,
+.page__subtitle {
     margin-bottom: 0;
 }
 
-p {
-    line-height: 1.5;
-    margin: 0;
+.nav {
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+.nav__title {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__title:hover {
+    color: #3498db;
+    text-decoration-line: underline;
 }
 
 .play-again {
@@ -31,6 +41,23 @@ p {
     background: #f4f4f4;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+.speak-button {
+    margin-top: 20px;
+    padding: 10px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.speak-button:active {
+    transform: scale(0.98);
+}
+  
+.speak-button:focus {
+    outline: none;
 }
 
 .msg {
