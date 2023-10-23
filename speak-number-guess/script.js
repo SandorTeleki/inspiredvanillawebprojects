@@ -1,4 +1,5 @@
 const msgEl = document.getElementById('msg');
+const speakButton = document.getElementById('speak-button');
 
 const randomNum = getRandomNumber();
 
@@ -9,8 +10,10 @@ window.SpeechRecognition =
 
 let recognition = new window.SpeechRecognition();
 
-// Start recognition and game
-recognition.start();
+// To stop speech recognition from restarting once you hit the victory screen
+// but before you end up starting a new game.
+let endFlag = 0;
+let startFlag = 0;
 
 // Capture user speak
 function onSpeak(e) {
@@ -48,9 +51,12 @@ function checkNumber(msg) {
   if (num === randomNum) {
     document.body.innerHTML = `
       <h2>Congrats! You have guessed the number! <br><br>
-      It was ${num}</h2>
+      It was: ${num}</h2>
       <button class="play-again" id="play-again">Play Again</button>
     `;
+    // Change flag to stop auto-restart of speech recognition
+    endFlag++;
+    recognition.stop();
   } else if (num > randomNum) {
     msgEl.innerHTML += '<div>GO LOWER</div>';
   } else {
@@ -67,10 +73,26 @@ function getRandomNumber() {
 recognition.addEventListener('result', onSpeak);
 
 // End SR service
-recognition.addEventListener('end', () => recognition.start());
+recognition.addEventListener('end', function() {
+  if(endFlag === 0){
+    recognition.start()
+  } else {
+    return;
+  }
+});
 
 document.body.addEventListener('click', e => {
   if (e.target.id == 'play-again') {
     window.location.reload();
+  }
+});
+
+// Click and hold button to 
+speakButton.addEventListener('click', () => {
+  if(startFlag === 0){
+    recognition.start()
+    startFlag++;
+  } else {
+    return;
   }
 });
