@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
     <title>Document</title>
 </head>
-<body>
-    <h1>Under construction</h1>
+<body class="body">
+    <h1 class="page__title">Fizz Buzz</h1>
+
+    <nav class="nav">
+        <a class="nav__title" href="../">Return to Main Page</a>
+    </nav>
+
+    <p class="description">
+        Fizz buzz is a group word game for children to teach them about division. 
+        Players take turns to count incrementally, replacing any number divisible 
+        by three with the word "fizz", and any number divisible by five with the 
+        word "buzz", and any number divisible by both 3 and 5 with the word "fizzbuzz".
+    </p>
+    <p class="description">
+        You can use this project to quickly check if a number should be replaced by 
+        "fizz", "buzz" or "fizzbuzz."
+    </p>
+    <h2 class="page__subtitle">Your number:</h2>
+    <input class="page__input" id="input" type="number" placeholder="0">
+    <div class="container">
+        <div class="spinner__shape fizz">Fizz</div>
+        <div class="spinner__shape buzz">Buzz</div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
