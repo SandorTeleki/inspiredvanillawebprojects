@@ -25,11 +25,17 @@
         "fizz", "buzz" or "fizzbuzz."
     </p>
     <h2 class="page__subtitle">Your number:</h2>
-    <input class="page__input" id="input" type="number" placeholder="0">
-    <div class="container">
-        <div class="spinner__shape fizz">Fizz</div>
-        <div class="spinner__shape buzz">Buzz</div>
+    <div class="input-form">
+        <input class="page__input" id="input" type="number" placeholder="0">
+        <button class="submit" id="submit">Submit</button>
     </div>
+    
+    <div class="container">
+        <div class="spinner__shape" id="fizz">Fizz</div>
+        <div class="spinner__shape" id="buzz">Buzz</div>
+    </div>
+
+    <div class="final-message" id="final-message"></div>
 
     <script src="script.js"></script>
 </body>

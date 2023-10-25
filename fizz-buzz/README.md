@@ -10,4 +10,5 @@ word "buzz", and any number divisible by both 3 and 5 with the word "fizzbuzz".
 - Display UI with input field for inputing number
 - Check if inputed number returns fizz (divisible by 3), buzz (divisible by 5) or fizzbuzz (divisible by both)
 - Based on the fizz buzz check, use CSS to display result
-
+- Added warning when trying to divide zero by any number
+- Page is responsive to either changes in the input fielding using the built-in input arrows, or typing in a number and pressing submit
