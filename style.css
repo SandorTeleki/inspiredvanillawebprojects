@@ -97,8 +97,26 @@
 
 .footer__author {
     margin: 0;
+    display: flex;
+    flex-direction: row;
 }
 
 .footer__copyright {
     margin: 0;
+    margin-left: 5px;
+}
+
+.footer__github {
+    margin: 0;
+}
+
+.footer__link {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer__link:hover{
+    text-decoration: underline;
+    color: #3498db;
 }
