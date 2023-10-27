@@ -11,21 +11,27 @@
   overflow: hidden;
 }
 
-.header {
-  padding: 40px 0 20px;
+.nav {
+  padding: 0;
 }
 
-.header__title{
- color: #3498db;
- text-decoration: none;
+.nav__title{
+  color: #fff;
+  text-decoration: none;
 }
 
-.header__title:hover{
-  text-decoration: underline;
+.nav__title:hover{
+  color: #3498db;
 }
 
 .page__title {
   margin: 20px 0 0;
+  font-size: 50px;
+}
+
+.page__subtitle {
+  font-size: 20px;
+  margin: 10px 0;
 }
 
 .game-container {
@@ -75,7 +81,7 @@
 }
 
 .letter {
-  border-bottom: 3px solid #13e73e;
+  border-bottom: 3px solid #fff;
   display: inline-flex;
   font-size: 30px;
   align-items: center;

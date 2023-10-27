@@ -13,16 +13,16 @@
   margin: 0;
 }
 
-.header {
+.nav {
   padding-bottom: 40px;
 }
 
-.header__title{
- color: #4f4e4e;
+.nav__title{
+ color: var(--primary-color);
  text-decoration: none;
 }
 
-.header__title:hover{
+.nav__title:hover{
   color: #3498db;
 }
 

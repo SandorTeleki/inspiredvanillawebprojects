@@ -15,18 +15,22 @@
   margin: 0;
 }
 
-.header{
-  margin: 20px 0 100px;
+.page__title {
+  margin: 20px 0 0;
+  font-size: 38px;
 }
 
-.header__title{
- color: #777;
+.nav {
+  margin: 20px 0 80px;
+}
+
+.nav__title {
+ color: #000;
  text-decoration: none;
 }
 
-.header__title:hover{
+.nav__title:hover {
   color: #3498db;
-  text-decoration-line: underline;
 }
 
 .container {
