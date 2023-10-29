@@ -11,22 +11,23 @@
   margin: 0;
 }
 
-.header {
-  padding: 20px 0 40px;
+.page__title {
+  color: #fff;
+  margin: 20px 0 0;
+  font-size: 40px;
 }
 
-.header__title {
-  color: #3d3b3b;
+.nav {
+  margin: 10px 0 40px;
+}
+
+.nav__title {
+  color: #fff;
   text-decoration: none;
 }
  
-.header__title:hover {
+.nav__title:hover {
   color: #3498db;
-  text-decoration-line: underline;
-}
-
-.page__title {
-  color: #fff;
 }
 
 .screen {

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 .body {
-  background-color: #120c69;
+  background-color: #130c70;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -12,18 +12,22 @@
   margin: 0;
 }
 
-.header{
-  margin: 20px 0 100px;
+.page__title {
+  font-size: 40px;
+  margin: 20px 0 0;
 }
 
-.header__title{
- color: #777;
+.nav {
+  margin: 10px 0 40px;
+}
+
+.nav__title {
+ color: #fff;
  text-decoration: none;
 }
 
-.header__title:hover{
+.nav__title:hover {
   color: #3498db;
-  text-decoration-line: underline;
 }
 
 .movie-container {
@@ -83,7 +87,7 @@
 }
 
 .showcase {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   padding: 5px 10px;
   border-radius: 5px;
   color: #777;

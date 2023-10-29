@@ -9,13 +9,14 @@
     height: 100vh;
 }
 
-.page__title{
+.page__title {
     margin: 50px 0 0;
+    font-size: 50px;
 }
 
 .nav {
     font-size: 16px;
-    margin: 10px 0 20px;
+    margin: 10px 0 40px;
 }
 
 .nav__title {
@@ -24,8 +25,7 @@
 }
 
 .nav__title:hover {
-    color: #3498db;
-    text-decoration-line: underline;
+    color: #fff;
 }
 
 .description {

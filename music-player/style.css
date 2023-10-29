@@ -19,22 +19,22 @@
   margin: 0;
 }
 
-.header {
-  padding-bottom: 40px;
+.page__title {
+  margin: 0;
+  font-size: 40px;
 }
 
-.header__title {
+.nav {
+  margin: 15px 0 0;
+}
+
+.nav__title {
   color: #3d3b3b;
   text-decoration: none;
 }
  
-.header__title:hover {
+.nav__title:hover {
   color: #3498db;
-  text-decoration-line: underline;
-}
-
-.page__title {
-  margin: 0;
 }
 
 .music-container {

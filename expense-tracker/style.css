@@ -15,31 +15,32 @@
   font-family: 'Lato', sans-serif;
 }
 
+.page__title {
+  letter-spacing: 1px;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
 .nav {
-  margin: 20px 0 30px;
+  margin: 10px 0 30px;
 }
 
 .nav__title {
- color: #777;
+ color: #000;
  text-decoration: none;
 }
 
 .nav__title:hover{
   color: #3498db;
-  text-decoration-line: underline;
 }
 
 .container {
   margin: 30px auto;
+  padding: 5px;
   width: 350px;
   display: flex;
   flex-direction: column;
-}
-
-.page__title {
-  letter-spacing: 1px;
-  margin: 0;
-  margin-top: 20px;
 }
 
 .container__title {

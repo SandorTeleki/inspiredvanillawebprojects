@@ -10,8 +10,22 @@
 }
 
 .page__title {
-  font-size: 45px;
+  font-size: 48px;
   color: #fff;
+  margin: 0;
+}
+
+.nav {
+  margin: 10px 0 50px;
+}
+
+.nav__title {
+ color: #fff;
+ text-decoration: none;
+}
+
+.nav__title:hover {
+  color: #000;
 }
 
 .canvas {
@@ -71,16 +85,3 @@
   transform: translateX(0);
 }
 
-.nav{
-  padding-top: 30px;
-}
-
-.nav__title{
- color: #fff;
- text-decoration: none;
-}
-
-.nav__title:hover{
-  color: #fff;
-  text-decoration-line: underline;
-}

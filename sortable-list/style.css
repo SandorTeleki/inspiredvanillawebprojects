@@ -23,6 +23,7 @@
 
 .page__title {
     margin: 20px 0 0;
+    font-size: 40px;
 }
 
 .nav {
@@ -37,7 +38,6 @@
 
 .nav__title:hover {
     color: #3498db;
-    text-decoration-line: underline;
 }
 
 .page__info {
@@ -109,6 +109,10 @@
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.check-btn:hover {
+  background-color: #fff;
 }
 
 .check-btn:active {

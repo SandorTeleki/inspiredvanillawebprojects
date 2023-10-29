@@ -91,8 +91,8 @@ function updateTime() {
 // Game over, show end screen
 function gameOver() {
   endgameEl.innerHTML = `
-    <h1>Time ran out</h1>
-    <p>Your final score is ${score}</p>
+    <h2 class="end-game-container__title">Time ran out</h2>
+    <p class="end-game-container__final-score">Your final score is ${score}</p>
     <button class="button" onclick="location.reload()">Reload</button>
   `;
 

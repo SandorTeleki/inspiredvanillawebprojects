@@ -5,6 +5,11 @@
   margin: 0;
 }
 
+.page__title {
+  margin: 20px 0 0;
+  font-size: 40px;
+}
+
 .nav {
   margin: 0;
   display: flex;
@@ -12,7 +17,7 @@
 }
 
 .nav__title{
-  color: #cfcbcb;
+  color: #e0e0e0;
   text-decoration: none;
   margin-bottom: 50px;
 }
@@ -29,10 +34,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.page__title {
-  margin: 20px 0px;
 }
 
 .flex {

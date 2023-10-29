@@ -13,8 +13,14 @@
   margin: 0;
 }
 
+.page__title {
+  color: var(--primary-color);
+  font-size: 40px;
+  margin: 20px 0;
+}
+
 .nav {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .nav__title{
@@ -24,10 +30,6 @@
 
 .nav__title:hover{
   color: #3498db;
-}
-
-.page__title {
-  color: var(--primary-color);
 }
 
 .page__description {

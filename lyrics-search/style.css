@@ -24,7 +24,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
   z-index: 1;
 }
@@ -40,23 +40,23 @@
   z-index: -1;
 }
 
-.header__navigation{
+.page__title {
+  margin: 0;
+  font-size: 40px;
+}
+
+.nav__link { 
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin: 10px 0 40px;
   color: #fff;
   text-decoration: none;
   z-index: 1;
 }
 
-.header__navigation:hover{
+.nav__link:hover {
   color: #43b4ff;
-  text-decoration-line: underline;
   z-index: 1;
-}
-
-.page__title {
-  margin: 0 0 30px;
 }
 
 .page__form {

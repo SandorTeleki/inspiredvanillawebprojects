@@ -8,8 +8,12 @@
   margin: 0;
 }
 
+.page__title {
+  margin: 20px 0 0;
+}
+
 .nav {
-  padding: 10px 0px;
+  margin: 10px 0 40px;
 }
 
 .nav__title {
@@ -19,11 +23,6 @@
   
 .nav__title:hover {
   color: #3498db;
-}
-
-.page__title {
-  margin: 0;
-  padding: 20px 0;
 }
 
 .container {
@@ -51,6 +50,10 @@
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
+}
+
+.button:hover {
+  background-color: #f4f3f3;
 }
 
 .main {

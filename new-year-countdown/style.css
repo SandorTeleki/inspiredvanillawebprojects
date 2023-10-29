@@ -31,11 +31,11 @@
 
 .page__title {
   font-size: 60px;
-  margin: -80px 0 20px;
+  margin: -80px 0 10px;
 }
 
 .nav {
-    padding: 10px 0 100px;
+    margin: 10px 0 120px;
     font-size: 16px;
 }
 
@@ -45,8 +45,7 @@
 }
 
 .nav__title:hover {
-    color: #fff;
-    text-decoration-line: underline;
+    color: #f4e800;
 }
   
 
