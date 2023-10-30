@@ -33,6 +33,3 @@ https://sandorteleki.github.io/inspiredvanillawebprojects/
 | 19  |       [Sortable List](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/sortable-list)       | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/sortable-list/index.html)  |
 | 20  | [Speak Number Guessing Game](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/speak-number-guess) | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/speak-number-guess/index.html)  |
 | 21 | [Fizz Buzz](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/fizz-buzz) | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/fizz-buzz/index.html)  |
-
-## Ideas for further mini projects:
-- CSS-only "The Horse in Motion" page - use SVG/Canvas to draw horse and animate it (https://en.wikipedia.org/wiki/The_Horse_in_Motion, https://www.toptal.com/css/svg-animation-css-tutorial, https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
