@@ -70,6 +70,14 @@
   color: #fff;
 }
 
+.controls .fa-volume-off {
+  color: #fff;
+}
+
+.muted {
+  color: #000;
+}
+
 .timestamp {
   color: #fff;
   font-weight: bold;
