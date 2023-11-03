@@ -34,7 +34,7 @@
   cursor: pointer;
   width: 60%;
   max-height: 600px; 
-  background-color: #000 !important;
+  background-color: #000;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -75,7 +75,8 @@
 }
 
 .muted {
-  color: #000;
+  background: 
+    linear-gradient(135deg, transparent 45%, #dc3545 45%, #dc3545 55%, transparent 55%);
 }
 
 .timestamp {

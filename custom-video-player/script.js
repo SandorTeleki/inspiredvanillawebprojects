@@ -2,6 +2,7 @@ const video = document.getElementById('video');
 const play = document.getElementById('play');
 const stop = document.getElementById('stop');
 const mute = document.getElementById('mute');
+const muteIcon = document.getElementById('mute-icon');
 const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
 
@@ -58,6 +59,13 @@ function stopVideo() {
 
 // Mute function
 function toggleVolume() {
+  if(video.volume === 1) {
+    video.volume = 0;
+    mute.classList.add('muted');
+  } else {
+    video.volume = 1;
+    mute.classList.remove('muted');
+  }
 }
 
 // Event listeners
