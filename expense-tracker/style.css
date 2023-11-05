@@ -53,6 +53,10 @@
   font-size: 30px;
 }
 
+.container__balance_negative {
+  color: #c0392b;
+}
+
 .container__heading {
   font-size: 18px;
   border-bottom: 1px solid #bbb;
@@ -176,4 +180,30 @@ label {
 
 .list-item:hover .delete-btn {
   opacity: 1;
+}
+
+@media (min-width: 1220px) {
+  .container-balance{
+    grid-area: balance;
+  }
+
+  .container-history {
+    grid-area: history;
+  }
+
+  .container-form {
+    grid-area: form;
+  }
+
+  .container {
+    display: grid;
+    justify-content: center;
+    column-gap: 50px;
+    height: min-content;
+    grid-template-columns: 350px 350px;
+    grid-template-rows: min-content;
+    grid-template-areas:
+      "balance history"
+      "form history"
+  }
 }
