@@ -89,6 +89,13 @@ function updateValues() {
     -1
   ).toFixed(2);
 
+  // Changes balance color if total becomes negative
+  if(total < 0) {
+    balance.classList.add('container__balance_negative')
+  } else {
+    balance.classList.remove('container__balance_negative');
+  }
+
   balance.innerText = `$${total}`;
   money_plus.innerText = `$${income}`;
   money_minus.innerText = `$${expense}`;
