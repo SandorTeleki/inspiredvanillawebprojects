@@ -96,9 +96,9 @@ function updateValues() {
     balance.classList.remove('container__balance_negative');
   }
 
-  balance.innerText = `$${total}`;
-  money_plus.innerText = `$${income}`;
-  money_minus.innerText = `$${expense}`;
+  balance.innerText = `$${formatNumber(+total)}`;
+  money_plus.innerText = `$${formatNumber(+income)}`;
+  money_minus.innerText = `$${formatNumber(+expense)}`;
 }
 
 // Remove transaction by ID
@@ -123,6 +123,7 @@ function init() {
   updateValues();
 }
 
+// Format numbers
 function formatNumber (number) {
   return number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
