@@ -54,7 +54,7 @@ function generateID() {
 // Add transactions to DOM list
 function addTransactionDOM(transaction) {
   // Get sign
-  const sign = transaction.amount < 0 ? '-' : '+';
+  const sign = transaction.amount < 0 ? '-' : '+'; //In case we revert transaction amount to previous code version
 
   const item = document.createElement('li');
   item.classList.add("list-item")
@@ -63,9 +63,8 @@ function addTransactionDOM(transaction) {
   item.classList.add(transaction.amount < 0 ? "money-minus-border" : "money-plus-border");
 
   item.innerHTML = `
-    ${transaction.text} <span>${sign}${Math.abs(
-    transaction.amount
-  )}</span> <button class="delete-btn" onclick="removeTransaction(${
+    ${transaction.text} <span>${formatNumber(transaction.amount)
+  }</span> <button class="delete-btn" onclick="removeTransaction(${
     transaction.id
   })">x</button>
   `;
