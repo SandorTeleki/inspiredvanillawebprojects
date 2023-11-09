@@ -17,7 +17,7 @@ Select a letter to figure out a hidden word in a set amount of chances
 - Minor HTML/CSS tweaks (header navigation to return to main page, tweaked some colors, etc.)
 - Using https://random-word-api.herokuapp.com/home we grab random words each time a new game starts (replacing default word set)
 - Changed wrong letters and correct letters to display as uppercase for better visibility (input not impacted)
+- Refactored e.keycode and replaced with regex expression and e.key
 
 ## Possible future improvements:
-- Press enter on popup to play again
-- Refactor keyCode
+
