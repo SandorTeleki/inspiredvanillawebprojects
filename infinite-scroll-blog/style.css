@@ -143,18 +143,20 @@
 
 .nav__return-to-top {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
   padding: 10px;
+  background-color: #fff;
+  border-radius: 20px;
 }
 
 .nav__return-link {
   text-decoration: none;
-  color: #fff;
+  color: #296ca8;
 }
 
 .nav__return-link:hover {
-  text-decoration: underline;
+  font-size: 18px;
 }
 
 @keyframes bounce {
