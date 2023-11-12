@@ -9,6 +9,7 @@ const answerEl = document.getElementById('answer');
 const addCardBtn = document.getElementById('add-card');
 const clearBtn = document.getElementById('clear');
 const addContainer = document.getElementById('add-container');
+const deleteCurrentCard = document.getElementById('delete-button');
 
 // Keep track of current card
 let currentActiveCard = 0;
@@ -35,17 +36,17 @@ function createCard(data, index) {
 
   card.innerHTML = `
   <div class="inner-card">
-  <div class="inner-card-front">
-    <p>
-      ${data.question}
-    </p>
+    <div class="inner-card-front">
+      <p>
+        ${data.question}
+      </p>
+    </div>
+    <div class="inner-card-back">
+      <p>
+        ${data.answer}
+      </p>
+    </div>
   </div>
-  <div class="inner-card-back">
-    <p>
-      ${data.answer}
-    </p>
-  </div>
-</div>
   `;
 
   card.addEventListener('click', () => card.classList.toggle('show-answer'));
@@ -162,3 +163,7 @@ clearBtn.addEventListener('click', () => {
   cardsContainer.innerHTML = '';
   window.location.reload();
 });
+
+deleteCurrentCard.addEventListener('click', ()=> {
+
+})
