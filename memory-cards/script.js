@@ -165,5 +165,9 @@ clearBtn.addEventListener('click', () => {
 });
 
 deleteCurrentCard.addEventListener('click', ()=> {
-
+  const cards = JSON.parse(localStorage.getItem('cards'));
+  const x = cards.splice(currentActiveCard,1);
+  localStorage.setItem('cards', JSON.stringify(cards));
+  window.location.reload();
 })
+
