@@ -17,7 +17,6 @@ Flash card app for learning. Display, add and remove memory cards with questions
 - Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, etc.)
 - Navigation with arrow keys between cards
 - Added alert in case question and/or answer text box were left blank
+- Delete button for individual cards (not just all cards)
 
 ## To Do:
-- Refactor all the button classes 
-- Delete button for each card (remove card from array and DOM, then resave the array to local storage)
