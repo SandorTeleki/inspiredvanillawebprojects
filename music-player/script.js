@@ -119,3 +119,13 @@ document.addEventListener("keydown", (e) => {
 		playSong();
 	}
 }) 
+
+// Change song with arrow keys
+document.addEventListener("keydown", (e) => {
+  if (e.code === 'ArrowRight'){
+    nextSong();
+  } else if (e.code === 'ArrowLeft'){
+    prevSong();
+  }
+})
+

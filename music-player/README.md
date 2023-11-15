@@ -13,6 +13,7 @@ Create beautiful UI to play music stored in the "music folder" using the HTML5 a
 - Refactor CSS to BEM style
 - Minor HTML/CSS tweaks (header navigation to return to main page, tweaked some colors, etc.)
 - Play/Pause with space bar
+- Next/previous song with arrow keys
 
 ## To Do:
 - Shuffle button? (makes more sense if there are more songs)
