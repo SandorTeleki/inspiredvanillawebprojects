@@ -18,4 +18,3 @@ Create beautiful UI to play music stored in the "music folder" using the HTML5 a
 ## To Do:
 - Shuffle button? (makes more sense if there are more songs)
 - Drop down list of available songs
-- Change navigation UI
