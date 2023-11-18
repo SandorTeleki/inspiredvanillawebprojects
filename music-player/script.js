@@ -8,6 +8,7 @@ const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
 const cover = document.getElementById('cover');
+const songPicker = document.getElementById('song-picker');
 
 // Song titles
 const songs = ['hey', 'summer', 'ukulele'];
@@ -129,3 +130,14 @@ document.addEventListener("keydown", (e) => {
   }
 })
 
+// Dynamically add songs to DOM
+songs.forEach((song) => {
+  const songOption = document.createElement('option');
+  songOption.innerHTML = `
+   <option value="${song}">${song}</option>
+  `;
+ songPicker.appendChild(songOption);
+})
+
+// Not checking selected song yet... (playing current song instead regardless of what you change input to)
+//songPicker.addEventListener('change', playSong);
