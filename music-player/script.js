@@ -19,6 +19,11 @@ let songIndex = 2;
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
 
+// Set initial drop down list selected song to the first song
+window.onload = function () {
+  songPicker.value = 'ukulele';
+}
+
 // Update song details
 function loadSong(song) {
   title.innerText = song;
@@ -33,6 +38,8 @@ function playSong() {
   playBtn.querySelector('i.fas').classList.add('fa-pause');
 
   audio.play();
+  //Updates selected song value from drop down list - so it always matches to the currently playing/shown song
+  songPicker.value = songs[songIndex];
 }
 
 // Pause song
@@ -140,4 +147,9 @@ songs.forEach((song) => {
 })
 
 // Not checking selected song yet... (playing current song instead regardless of what you change input to)
-//songPicker.addEventListener('change', playSong);
+songPicker.addEventListener('change', () => {
+  loadSong(songPicker.value);
+  playSong();
+});
+
+
