@@ -2,6 +2,8 @@ const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
+const muteBtn = document.getElementById('mute');
+
 
 const audio = document.getElementById('audio');
 const progress = document.getElementById('progress');
@@ -93,6 +95,28 @@ function setProgress(e) {
   audio.currentTime = (clickX / width) * duration;
 }
 
+// Dynamically add songs to DOM
+songs.forEach((song) => {
+  const songOption = document.createElement('option');
+  songOption.innerHTML = `
+   <option value="${song}">${song}</option>
+  `;
+ songPicker.appendChild(songOption);
+})
+
+// Mute function
+function toggleVolume() {
+  if(audio.volume === 1) {
+    audio.volume = 0;
+    muteBtn.classList.add('muted');
+  } else {
+    audio.volume = 1;
+    muteBtn.classList.remove('muted');
+  }
+}
+
+//-----------------------------------------------------------------------------------//
+
 // Event listeners
 playBtn.addEventListener('click', () => {
   const isPlaying = musicContainer.classList.contains('play');
@@ -137,19 +161,20 @@ document.addEventListener("keydown", (e) => {
   }
 })
 
-// Dynamically add songs to DOM
-songs.forEach((song) => {
-  const songOption = document.createElement('option');
-  songOption.innerHTML = `
-   <option value="${song}">${song}</option>
-  `;
- songPicker.appendChild(songOption);
-})
-
-// Not checking selected song yet... (playing current song instead regardless of what you change input to)
+// Change currently playing song based on drop down menu selection
 songPicker.addEventListener('change', () => {
   loadSong(songPicker.value);
   playSong();
 });
+
+// Mute toggle button
+muteBtn.addEventListener('click', toggleVolume)
+
+// Press "m" to toggle mute
+document.addEventListener("keydown", (e) => {
+  if (e.key === 'm'){
+    toggleVolume();
+  }
+})
 
 

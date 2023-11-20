@@ -176,3 +176,15 @@
   width: 0%;
   transition: width 0.1s linear;
 }
+
+.mute-button {
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  color: #cdc2d0;
+}
+
+.muted {
+  background: 
+    linear-gradient(135deg, transparent 45%, #dc3545 45%, #dc3545 55%, transparent 55%);
+}
