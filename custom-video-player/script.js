@@ -92,3 +92,10 @@ document.addEventListener("keydown", (e) => {
     stopVideo();
   }
 })
+
+// Press "m" to toggle mute
+document.addEventListener("keydown", (e) => {
+  if (e.key === 'm'){
+    toggleVolume();
+  }
+})
