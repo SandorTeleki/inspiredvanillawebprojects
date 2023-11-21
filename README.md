@@ -33,7 +33,4 @@ https://sandorteleki.github.io/inspiredvanillawebprojects/
 | 19  |       [Sortable List](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/sortable-list)       | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/sortable-list/index.html)  |
 | 20  | [Speak Number Guessing Game](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/speak-number-guess) | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/speak-number-guess/index.html)  |
 | 21 | [Fizz Buzz](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/fizz-buzz) | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/fizz-buzz/index.html)  |
-
-
-To Do:
-Birthday countdown (save birthday to local storage, do a similar count down to new-year-countdown. Account for birthdays on february 29th/leap years)
+| 22 | [Birthday Countdown](https://github.com/SandorTeleki/inspiredvanillawebprojects/tree/main/birthday-countdown) | [Live Demo](https://sandorteleki.github.io/inspiredvanillawebprojects/birthday-countdown/index.html)  |
