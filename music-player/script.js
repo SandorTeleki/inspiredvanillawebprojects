@@ -180,8 +180,8 @@ document.addEventListener("keydown", (e) => {
 volumeLevel.addEventListener("change", (e) => {
   var loudness = volumeLevel.value;
   audio.volume = loudness/100;
-  console.log(loudness);
-  console.log(audio.volume);
+  // console.log(loudness);
+  // console.log(audio.volume);
 })
 
 
