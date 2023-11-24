@@ -79,6 +79,30 @@
     linear-gradient(135deg, transparent 45%, #dc3545 45%, #dc3545 55%, transparent 55%);
 }
 
+.volume-control {
+  position: relative;
+  display: flex;
+}
+
+.volume-control:hover .volume-level {
+  display: block;
+}
+
+.volume-level {
+  position: absolute;
+  /* display: none; */
+  top: -130px;
+  left: -8px;
+  appearance: slider-vertical;
+  width: 40px;
+}
+
+input[type="range"].volume-level {
+  appearance: slider-vertical;
+  position: absolute;
+  -webkit-appearance: slider-vertical;
+}
+
 .timestamp {
   color: #fff;
   font-weight: bold;

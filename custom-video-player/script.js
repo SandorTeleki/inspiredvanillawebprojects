@@ -5,6 +5,7 @@ const mute = document.getElementById('mute');
 const muteIcon = document.getElementById('mute-icon');
 const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
+const volumeLevel = document.getElementById('volume-level');
 
 // Play & pause video
 function toggleVideoStatus() {
@@ -98,4 +99,11 @@ document.addEventListener("keydown", (e) => {
   if (e.key === 'm'){
     toggleVolume();
   }
+})
+
+volumeLevel.addEventListener("change", (e) => {
+  var loudness = volumeLevel.value;
+  video.volume = loudness/100;
+  // console.log(loudness);
+  // console.log(video.volume);
 })

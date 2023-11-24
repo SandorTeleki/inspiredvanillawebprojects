@@ -17,5 +17,6 @@ Custom video player using the HTML5 video element and it's JavaScript API with a
 - Added aria-label values to play/stop buttons for accessibility purposes
 - Minor CSS tweaks (added navigation to return to main page, tweaked some colors, changed screen width/height etc.)
 - Created mute button and associated functionality
+- Volume slider (input range) functionality to change volume of currently playing song
 
 ## To Do:

@@ -23,18 +23,18 @@
       <button aria-label="stop button" class="control__btn" id="stop">
         <i class="fa fa-stop fa-2x"></i>
       </button>
-      <button aria-label="mute button" class="control__btn" id="mute">
+      <!-- <button aria-label="mute button" class="control__btn" id="mute">
         <i class="fa fa-volume-off fa-2x" id="mute-icon"></i>
-      </button>
-      <input
-        type="range"
-        id="progress"
-        class="progress"
-        min="0"
-        max="100"
-        step="0.1"
-        value="0"
-      >
+      </button> -->
+      
+      <div class="volume-control">
+        <button aria-label="mute button" class="control__btn" id="mute">
+          <i class="fa fa-volume-off fa-2x" id="mute-icon"></i>
+        </button>
+        <input class="volume-level" id="volume-level" type="range" value="100" max="100">
+      </div>
+      
+      <input type="range" id="progress" class="progress" min="0" max="100" step="0.1" value="0">
       <span class="timestamp" id="timestamp">00:00</span>
     </div>
 
