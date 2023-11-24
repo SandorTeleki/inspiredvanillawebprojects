@@ -18,4 +18,4 @@ A relaxing breathing app with a visual director to tell you when to breathe in, 
 - Added mute/unmute funcationality
 
 ## To Do:
-- 
+
