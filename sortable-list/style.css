@@ -80,15 +80,15 @@
   background-color: #eaeaea;
 }
 
-.person-name {
+.country-name {
   margin: 0 20px 0 0;
 }
 
-.draggable-list__item.right .person-name {
+.draggable-list__item.right .country-name {
   color: #3ae374;
 }
 
-.draggable-list__item.wrong .person-name {
+.draggable-list__item.wrong .country-name {
   color: #ff3838;
 }
 
