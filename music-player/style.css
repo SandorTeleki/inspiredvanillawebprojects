@@ -186,5 +186,47 @@
 
 .muted {
   background: 
-    linear-gradient(135deg, transparent 45%, #dc3545 45%, #dc3545 55%, transparent 55%);
+    linear-gradient(135deg, transparent 45%, #fe8daa 45%, #fe8daa 55%, transparent 55%);
 }
+
+.volume-control {
+  position: relative;
+  display: flex;
+}
+
+.volume-control:hover .volume-level {
+  display: block;
+}
+
+.volume-level {
+  position: absolute;
+  display: none;
+  top: -130px;
+  left: -8px;
+  appearance: slider-vertical;
+  width: 40px;
+}
+
+/* In case the volume slider needs styling - not supported for all browsers... */
+
+/* input[type="range"]::-webkit-slider-runnable-track{
+  -webkit-appearance: none;
+  background-color: #fe8daa;
+  width: 8px;
+  border-radius: 20px;
+  outline: solid .5px #000;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #fe8daa;
+  margin-right: -4px;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  background-color: #fe8daa;
+} */

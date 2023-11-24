@@ -45,9 +45,12 @@
         <button aria-label="fast forward button" id="next" class="action-btn">
           <i class="fas fa-forward"></i>
         </button>
-        <button aria-label="mute button" id="mute" class="mute-button">
-          <i class="fas fa-volume-off fa-2x"></i>
-        </button>
+        <div class="volume-control">
+          <button aria-label="mute button" id="mute" class="mute-button">
+            <i class="fas fa-volume-off fa-2x"></i>
+          </button>
+          <input class="volume-level" id="volume-level" type="range" value="100" max="100">
+        </div>
       </div>
 
     </div>

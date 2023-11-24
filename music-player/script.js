@@ -3,7 +3,7 @@ const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const muteBtn = document.getElementById('mute');
-
+const volumeLevel = document.getElementById('volume-level');
 
 const audio = document.getElementById('audio');
 const progress = document.getElementById('progress');
@@ -176,5 +176,13 @@ document.addEventListener("keydown", (e) => {
     toggleVolume();
   }
 })
+
+volumeLevel.addEventListener("change", (e) => {
+  var loudness = volumeLevel.value;
+  audio.volume = loudness/100;
+  console.log(loudness);
+  console.log(audio.volume);
+})
+
 
 

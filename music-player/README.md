@@ -15,7 +15,7 @@ Create beautiful UI to play music stored in the "music folder" using the HTML5 a
 - Play/Pause with space bar
 - Next/previous song with arrow keys
 - Functional drop down list of available songs (selecting other song starts playing it)
+- Volume slider (input range) functionality to change volume of currently playing song
 
-## To Do:
-- Shuffle button? (makes more sense if there are more than three songs)
-- Volume functionality?
+## Possible Improvements:
+- Shuffle button and functionality if more songs are added
