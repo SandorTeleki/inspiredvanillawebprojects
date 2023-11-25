@@ -10,13 +10,20 @@
     <title>Speed Typer</title>
   </head>
   <body class="body">
-    <button id="settings-btn" class="button settings-btn">
+
+    <!-- Side buttons -->
+    <button class="button settings-btn" id="settings-btn" aria-label="settings button">
       <i class="fas fa-cog"></i>
     </button>
+    <button class="button leaderboard-btn" id="leaderboard-btn" aria-label="leaderboard button">
+      <i class="fas fa-list-ol"></i>
+    </button>
+
+    <!-- Settings -->
     <div id="settings" class="settings">
       <form id="settings-form">
         <div>
-          <label for="difficulty">Difficulty</label>
+          <label for="difficulty">Difficulty:</label>
           <select class="difficulty-selector" id="difficulty">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
@@ -28,6 +35,16 @@
         <a class="nav__title" href="../">Return to Main Page</a>
       </nav>  
     </div>
+
+    <!-- High Score -->
+    <div class="leaderboard" id="leaderboard">
+      <h2 class="leaderboard__title">Leaderboard</h2>
+      <ul class="leaderboard__list" id="leaderboard">
+        <ol class="leaderboard__item">Bob 14</ol>
+      </ul>
+    </div>
+
+    <!-- Container -->
     <div class="container">
       <h1 class="page__title">👩‍💻 Speed Typer 👨‍💻</h1>
       <small>Type the following:</small>

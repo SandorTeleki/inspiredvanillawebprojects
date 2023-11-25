@@ -4,8 +4,10 @@ const scoreEl = document.getElementById('score');
 const timeEl = document.getElementById('time');
 const endgameEl = document.getElementById('end-game-container');
 const settingsBtn = document.getElementById('settings-btn');
+const leaderboardBtn = document.getElementById('leaderboard-btn');
 const settings = document.getElementById('settings');
 const settingsForm = document.getElementById('settings-form');
+const leaderboard = document.getElementById('leaderboard');
 const difficultySelect = document.getElementById('difficulty');
 
 // List of words for game
@@ -32,11 +34,24 @@ const words = [
   'loving'
 ];
 
+getRandomWords(20);
+
+async function getRandomWords(amount) {
+	fetch(`https://random-word-api.herokuapp.com/word?number=${amount}`)
+    .then(res => res.json())
+    .then(data => {
+		words.push( ...data)
+	})
+}
+
 // Init word
 let randomWord;
 
 // Init score
 let score = 0;
+if(score > 15) {
+  getRandomWords();
+}
 
 // Init time
 let time = 10;
@@ -74,13 +89,15 @@ function addWordToDOM() {
 function updateScore() {
   score++;
   scoreEl.innerHTML = score;
+  if(score % 10 === 0) {
+    getRandomWords(10);
+  }
 }
 
 // Update time
 function updateTime() {
   time--;
   timeEl.innerHTML = time + 's';
-
   if (time === 0) {
     clearInterval(timeInterval);
     // end game
@@ -93,6 +110,10 @@ function gameOver() {
   endgameEl.innerHTML = `
     <h2 class="end-game-container__title">Time ran out</h2>
     <p class="end-game-container__final-score">Your final score is ${score}</p>
+    <div class="high-score__name">Your name:
+      <input class="high-score__input" type="text">
+      <button class="submit-button">Submit</button>
+    </div>
     <button class="button" onclick="location.reload()">Reload</button>
   `;
 
@@ -134,3 +155,6 @@ settingsForm.addEventListener('change', e => {
   difficulty = e.target.value;
   localStorage.setItem('difficulty', difficulty);
 });
+
+//High Score button - show leaderboard
+leaderboardBtn.addEventListener('click', () => leaderboard.classList.toggle('hide'));

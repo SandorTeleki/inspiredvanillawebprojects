@@ -31,6 +31,10 @@
   outline: none;
 }
 
+.button:hover {
+  background-color:#c2c2c2 ;
+}
+
 .difficulty-selector {
   width: 200px;
   padding: 5px;
@@ -50,11 +54,12 @@ button:focus {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  border: 1px solid #000;
 }
 
-.settings-btn:hover {
-  background-color: #cecece;
+.leaderboard-btn {
+  position: absolute;
+  bottom: 75px;
+  left: 30px;
 }
 
 .settings {
@@ -74,6 +79,42 @@ button:focus {
 
 .settings.hide {
   transform: translateY(-100%);
+}
+
+.leaderboard {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  background-color: #34495e;
+  color: #fff;
+}
+
+.leaderboard.hide {
+  display: none;
+}
+
+.leaderboard__title {
+  text-decoration: underline;
+  margin: 0 0 40px;
+}
+
+.leaderboard__list {
+  margin: 0;
+  padding: 0;
+}
+
+.leaderboard__item {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -143,4 +184,25 @@ button:focus {
 
 .end-game-container__final-score {
   margin: 10px 0 40px;
+}
+
+.high-score__name {
+  margin-bottom: 20px;
+}
+
+.high-score__input {
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+.submit-button {
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color:#c2c2c2 ;
 }
