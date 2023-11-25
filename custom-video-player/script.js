@@ -105,7 +105,7 @@ document.addEventListener("keydown", (e) => {
 
 volumeLevel.addEventListener("change", (e) => {
   var loudness = volumeLevel.value;
-  video.volume = loudness/100;
+  video.volume = loudness;
   if (video.volume === 0){
     mute.classList.add('muted');
   } else {

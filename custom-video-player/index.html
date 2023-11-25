@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Custom Video Player</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/progress.css">
+    <!-- <link rel="stylesheet" href="css/progress.css"> Removed due to feature deprecation and CSS issues -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="#">
   </head>
@@ -31,7 +31,7 @@
         <button aria-label="mute button" class="control__btn" id="mute">
           <i class="fa fa-volume-off fa-2x" id="mute-icon"></i>
         </button>
-        <input class="volume-level" id="volume-level" type="range" value="100" max="100">
+        <input class="volume-level" id="volume-level" type="range" value="1" max="1" step="0.01">
       </div>
 
       <input class="time-bar" type="range" id="progress" class="progress" min="0" max="100" step="0.1" value="0">
