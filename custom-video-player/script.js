@@ -60,11 +60,13 @@ function stopVideo() {
 
 // Mute function
 function toggleVolume() {
-  if(video.volume === 1) {
+  if(video.volume !== 0) {
     video.volume = 0;
+    volumeLevel.value = 0;
     mute.classList.add('muted');
   } else {
     video.volume = 1;
+    volumeLevel.value = 100;
     mute.classList.remove('muted');
   }
 }
@@ -104,6 +106,11 @@ document.addEventListener("keydown", (e) => {
 volumeLevel.addEventListener("change", (e) => {
   var loudness = volumeLevel.value;
   video.volume = loudness/100;
-  // console.log(loudness);
-  // console.log(video.volume);
+  if (video.volume === 0){
+    mute.classList.add('muted');
+  } else {
+    mute.classList.remove('muted');
+  }
 })
+
+//change input step to 0.01

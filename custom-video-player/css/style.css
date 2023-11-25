@@ -90,9 +90,9 @@
 
 .volume-level {
   position: absolute;
-  /* display: none; */
+  display: none;
   top: -130px;
-  left: -8px;
+  left: 5px;
   appearance: slider-vertical;
   width: 40px;
 }
@@ -101,6 +101,16 @@ input[type="range"].volume-level {
   appearance: slider-vertical;
   position: absolute;
   -webkit-appearance: slider-vertical;
+  width: 10px;
+  border-radius: 20px;
+}
+
+input[type="range"]::-webkit-slider-thumb.volume-level {
+  appearance: slider-vertical;
+  position: absolute;
+  -webkit-appearance: slider-vertical;
+  width: 10px;
+  border-radius: 20px;
 }
 
 .timestamp {
