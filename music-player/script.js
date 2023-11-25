@@ -106,12 +106,14 @@ songs.forEach((song) => {
 
 // Mute function
 function toggleVolume() {
-  if(audio.volume === 1) {
+  if(audio.volume !== 0) {
     audio.volume = 0;
-    muteBtn.classList.add('muted');
+    volumeLevel.value = 0;
+    mute.classList.add('muted');
   } else {
     audio.volume = 1;
-    muteBtn.classList.remove('muted');
+    volumeLevel.value = 1;
+    mute.classList.remove('muted');
   }
 }
 
@@ -179,9 +181,12 @@ document.addEventListener("keydown", (e) => {
 
 volumeLevel.addEventListener("change", (e) => {
   var loudness = volumeLevel.value;
-  audio.volume = loudness/100;
-  // console.log(loudness);
-  // console.log(audio.volume);
+  audio.volume = loudness;
+  if (audio.volume === 0){
+    mute.classList.add('muted');
+  } else {
+    mute.classList.remove('muted');
+  }
 })
 
 

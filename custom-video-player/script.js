@@ -66,7 +66,7 @@ function toggleVolume() {
     mute.classList.add('muted');
   } else {
     video.volume = 1;
-    volumeLevel.value = 100;
+    volumeLevel.value = 1;
     mute.classList.remove('muted');
   }
 }
@@ -112,5 +112,3 @@ volumeLevel.addEventListener("change", (e) => {
     mute.classList.remove('muted');
   }
 })
-
-//change input step to 0.01
