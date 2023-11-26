@@ -204,3 +204,18 @@ button:focus {
 .submit-button:hover {
   background-color:#c2c2c2 ;
 }
+
+.footer__information {
+  color: #fff;
+  /* margin-top: 150px; */
+}
+
+.footer__hyperlink {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer__hyperlink:hover {
+  cursor: pointer;
+  color: #3498db;
+}
