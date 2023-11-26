@@ -92,6 +92,12 @@ function updateScore() {
   if(score % 10 === 0) {
     getRandomWords(10);
   }
+  if (time > 30) {
+    score++;
+  }
+  if (time > 60) {
+    score++;
+  }
 }
 
 // Update time
