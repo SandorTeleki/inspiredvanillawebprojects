@@ -157,4 +157,4 @@ settingsForm.addEventListener('change', e => {
 });
 
 //High Score button - show leaderboard
-leaderboardBtn.addEventListener('click', () => leaderboard.classList.toggle('hide'));
+leaderboardBtn.addEventListener('click', () => leaderboard.classList.toggle('show'));
