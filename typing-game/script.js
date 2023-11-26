@@ -9,8 +9,9 @@ const settings = document.getElementById('settings');
 const settingsForm = document.getElementById('settings-form');
 const leaderboard = document.getElementById('leaderboard');
 const difficultySelect = document.getElementById('difficulty');
+const submitBtn = document.getElementById('submit-button');
 
-// List of words for game
+// List of base words for the game
 const words = [
   'sigh',
   'tense',
@@ -34,7 +35,9 @@ const words = [
   'loving'
 ];
 
+//Add words from random word API to word bank (improve replayability)
 getRandomWords(20);
+var wordCount = 0;
 
 async function getRandomWords(amount) {
 	fetch(`https://random-word-api.herokuapp.com/word?number=${amount}`)
@@ -88,6 +91,7 @@ function addWordToDOM() {
 // Update score
 function updateScore() {
   score++;
+  wordCount++;
   scoreEl.innerHTML = score;
   if(score % 10 === 0) {
     getRandomWords(10);
@@ -115,10 +119,11 @@ function updateTime() {
 function gameOver() {
   endgameEl.innerHTML = `
     <h2 class="end-game-container__title">Time ran out</h2>
-    <p class="end-game-container__final-score">Your final score is ${score}</p>
+    <p class="end-game-container__final-score">Your final score is: ${score}</p>
+    <p class="end-game-container__final-word-count">You typed ${wordCount} words correctly </p>
     <div class="high-score__name">Your name:
       <input class="high-score__input" type="text">
-      <button class="submit-button">Submit</button>
+      <button class="submit-button" id="submit-button">Submit</button>
     </div>
     <button class="button" onclick="location.reload()">Reload</button>
   `;

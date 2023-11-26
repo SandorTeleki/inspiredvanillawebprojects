@@ -181,7 +181,11 @@ button:focus {
 }
 
 .end-game-container__final-score {
-  margin: 10px 0 40px;
+  margin: 10px 0 0;
+}
+
+.end-game-container__final-word-count {
+  margin: 0 0 40px;
 }
 
 .high-score__name {
