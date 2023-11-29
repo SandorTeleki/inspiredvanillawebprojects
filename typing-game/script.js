@@ -73,13 +73,18 @@ var baseLeaderboard = [
   {																									
     name: "OG Typist",																									
     points: "51",																									
-  },																									
+  },		
   {																									
     name: "Lamp McLamp",																									
     points: "43",																									
-  },																									
-];																									
-																									
+  },																																												
+];						
+
+// Sort Leaderboard based on high score (most points) - descending order																			
+baseLeaderboard.sort((a,b) => {
+  return b.points - a.points;
+});
+
 //Add words from random word API to word bank (improve replayability)																									
 getRandomWords(20);																									
 var wordCount = 0;																									
@@ -140,7 +145,7 @@ function updateScore() {
   }																									
   if (time > 60) {																									
     score++;																									
-  }																									
+  }			
 }																									
 																									
 // Update time																									
