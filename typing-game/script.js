@@ -160,16 +160,16 @@ function updateTime() {
 }																									
 																									
 // Game over, show end screen																									
-function gameOver() {																									
-  endgameEl.innerHTML = `																									
-  <h2 class="end-game-container__title">Time ran out</h2>																									
-  <p class="end-game-container__final-score">Your final score is: ${score}</p>																									
-  <p class="end-game-container__final-word-count">You typed ${wordCount} words correctly </p>																									
-  <div class="high-score__name">Your name:																									
-  <input class="high-score__input" type="text">																									
-  <button class="submit-button" id="submit-button">Submit</button>																									
-  </div>																									
-  <button class="button" onclick="location.reload()">Reload</button>																									
+function gameOver() {
+  endgameEl.innerHTML = `
+  <h2 class="end-game-container__title">Time ran out</h2>
+    <p class="end-game-container__final-score">Your final score is: ${score}</p>
+    <p class="end-game-container__final-word-count">You typed ${wordCount} words correctly </p>
+    <div class="high-score__name">Your name:
+      <input class="high-score__input" type="text" minlength="2" maxlength="20" required>
+      <button class="submit-button" id="submit-button">Submit</button>
+    </div>
+    <button class="button" onclick="location.reload()">Reload</button>
   `;																									
                                                     
   endgameEl.style.display = "flex";																									
