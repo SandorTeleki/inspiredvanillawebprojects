@@ -16,5 +16,3 @@ Display a scrambled list that can be sorted with drag and drop
 - Minor CSS tweaks (added navigation to return to main page, tweaked some colors, etc.)
 - Rearranging correct list items properly updates right/wrong color
 - dragDrop() refactored so that it doesn't run checkOrder before the button was clicked at least once
-
-## To Do:

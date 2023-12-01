@@ -14,5 +14,3 @@ Search and generate random meals from the [themealdb.com](https://www.themealdb.
 - Fully converted CSS to use BEM methodology
 - Updated JS to user new BEM classes and not rely on stacking specificity
 - Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, etc.)
-
-## To Do:

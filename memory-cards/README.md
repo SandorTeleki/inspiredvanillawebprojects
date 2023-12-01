@@ -18,5 +18,3 @@ Flash card app for learning. Display, add and remove memory cards with questions
 - Navigation with arrow keys between cards
 - Added alert in case question and/or answer text box were left blank
 - Delete button for individual cards (not just all cards)
-
-## To Do:

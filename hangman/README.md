@@ -19,5 +19,3 @@ Select a letter to figure out a hidden word in a set amount of chances
 - Changed wrong letters and correct letters to display as uppercase for better visibility (input not impacted)
 - Refactored e.keycode and replaced with regex expression and e.key
 
-## Possible future improvements:
-

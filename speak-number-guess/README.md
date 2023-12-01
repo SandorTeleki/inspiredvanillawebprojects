@@ -16,6 +16,3 @@ Number guessing game where you speak your guess into the microphone using the sp
 - Button has to be clicked to start game
 - Speech recognition now stops at victory screen
 - Pressing start button multiple times no longer returns an error in the console log
-
-## To Do:
-- Create a stop functionality (button and spoken version)
