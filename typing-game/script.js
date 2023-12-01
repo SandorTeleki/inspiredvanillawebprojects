@@ -11,8 +11,7 @@ const settingsForm = document.getElementById("settings-form");
 const leaderboardContainer = document.getElementById("leaderboard");																									
 const leaderboardList = document.getElementById("leaderboard-list");																									
 const difficultySelect = document.getElementById("difficulty");																									
-const submitBtn = document.getElementById("submit-button");																									
-																									
+																				
 // List of base words for the game																									
 const words = [																									
   "sigh",
@@ -78,12 +77,29 @@ var baseLeaderboard = [
     name: "Lamp McLamp",																									
     points: "43",																									
   },																																												
-];						
+]
 
-// Sort Leaderboard based on high score (most points) - descending order																			
-baseLeaderboard.sort((a,b) => {
-  return b.points - a.points;
-});
+// Set default leaderboard based on made up players and scores
+function setLeaderboard(){
+  let leaderboard = JSON.parse(localStorage.getItem("baseLeaderboard"));
+  if (leaderboard === null){
+    localStorage.setItem("baseLeaderboard", JSON.stringify(baseLeaderboard));
+  } else {
+    return;
+  }
+}
+
+setLeaderboard();
+
+
+var flag = 0;
+// Sort Leaderboard based on high score (most points) - descending order
+function baseLeaderboardSort (leaderboard){
+  leaderboard.sort((a,b) => {
+    return b.points - a.points;
+  });
+}																	
+
 
 //Add words from random word API to word bank (improve replayability)																									
 getRandomWords(20);																									
@@ -101,7 +117,7 @@ async function getRandomWords(amount) {
 let randomWord;																									
 																									
 // Init score																									
-let score = 0;																									
+let score = 0;																							
 if (score > 15) {																									
   getRandomWords();																									
 }																									
@@ -161,18 +177,48 @@ function updateTime() {
 																									
 // Game over, show end screen																									
 function gameOver() {
-  endgameEl.innerHTML = `
-  <h2 class="end-game-container__title">Time ran out</h2>
-    <p class="end-game-container__final-score">Your final score is: ${score}</p>
-    <p class="end-game-container__final-word-count">You typed ${wordCount} words correctly </p>
-    <div class="high-score__name">Your name:
-      <input class="high-score__input" type="text" minlength="2" maxlength="20" required>
-      <button class="submit-button" id="submit-button">Submit</button>
-    </div>
-    <button class="button" onclick="location.reload()">Reload</button>
-  `;																									
-                                                    
-  endgameEl.style.display = "flex";																									
+  localStorage.getItem(baseLeaderboard);
+  const lowestScore = baseLeaderboard[9].points;
+  console.log(lowestScore);
+  if(score > lowestScore){
+    endgameEl.innerHTML = `
+    <h2 class="end-game-container__title">Time ran out</h2>
+    <h3 class="end-game-container__subtitle">New High Score!</h3>
+      <p class="end-game-container__final-score">Your final score is: ${score}</p>
+      <p class="end-game-container__final-word-count">You typed ${wordCount} words correctly </p>
+      <div class="high-score__name">Your name:
+        <input class="high-score__input" id="high-score__input" type="text" minlength="2" maxlength="20" required>
+        <button class="submit-button" id="submit-button">Submit</button>
+      </div>
+      <button class="button" onclick="location.reload()">Reload</button>
+    `;																									
+                                                      
+    endgameEl.style.display = "flex";
+  } else {
+    endgameEl.innerHTML = `
+    <h2 class="end-game-container__title">Time ran out</h2>
+    <h3 class="end-game-container__subtitle">No new High Score...</h3>
+      <p class="end-game-container__final-score">Your final score is: ${score}</p>
+      <p class="end-game-container__final-word-count">You typed ${wordCount} words correctly </p>
+        <button class="submit-button submit-button_hide" id="submit-button">Submit</button>
+      <button class="button" onclick="location.reload()">Reload</button>
+    `;																									
+                                                      
+    endgameEl.style.display = "flex";
+  };
+  
+  const submitBtn = document.getElementById("submit-button");																									
+  submitBtn.addEventListener('click', () => {
+    const highScoreInput = document.getElementById('high-score__input');
+    const highScoreName = highScoreInput.value;
+  
+    const storedLeaderboard = JSON.parse(localStorage.getItem("baseLeaderboard")) || [];
+    storedLeaderboard.push({ name: highScoreName, points: score.toString() });
+    baseLeaderboardSort(storedLeaderboard);
+    storedLeaderboard.splice(10, 12); // removes lowest score (so only top 10 are displayed)
+    localStorage.setItem("baseLeaderboard", JSON.stringify(storedLeaderboard));
+    location.reload();
+  });
 }																									
 																									
 addWordToDOM();																									
@@ -212,13 +258,18 @@ settingsForm.addEventListener("change", (e) => {
 });																									
 																									
 //High Score button - show leaderboard																									
-leaderboardBtn.addEventListener("click", () => {																									
-  leaderboardContainer.classList.toggle("show");																									
-  var i = 0;																									
-  baseLeaderboard.forEach((item) => {																									
-    i++;																									
-    leaderboardList.innerHTML += `																									
-    <li class="leaderboard__item"><span class="leaderboard__span">${i}. ${item.name}</span> <span class="leaderboard__span">${item.points}</span></li>																									
-    `;																									
-  });																									
-});																									
+leaderboardBtn.addEventListener("click", () => {																								
+  leaderboardContainer.classList.toggle("show");																								
+  var i = 0;
+  const baseLeaderboard = JSON.parse(localStorage.getItem("baseLeaderboard")) || [];
+  if ( flag === 0) {
+    flag++;
+    baseLeaderboard.forEach((item) => {																									
+      i++;																									
+      leaderboardList.innerHTML += `																									
+      <li class="leaderboard__item"><span class="leaderboard__span">${i}. ${item.name}</span> <span class="leaderboard__span">${item.points}</span></li>																									
+      `;																									
+    });		
+  }
+																							
+});								

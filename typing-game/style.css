@@ -181,16 +181,23 @@ button:focus {
   flex-direction: column;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: -50px;
+  /* width: 100%;
+  height: 100%; */
+  width: 600px;
+  height: 300px;
   z-index: 1;
   border-radius: 10px;
 }
 
 .end-game-container__title {
-  margin: 0;
-  font-size: 36px;
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.end-game-container__subtitle {
+  margin: 0 0 20px;
+  font-size: 16px;
 }
 
 .end-game-container__final-score {
@@ -220,6 +227,10 @@ button:focus {
 
 .submit-button:hover {
   background-color:#c2c2c2 ;
+}
+
+.submit-button_hide {
+  display: none;
 }
 
 .footer__information {
