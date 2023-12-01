@@ -17,6 +17,4 @@ Keep track of income and expenses. Add and remove items and save to local storag
 - Minor CSS tweaks (added header navigation to return to main page, tweaked some colors, etc.)
 - Refactored expense tracker display to use grid when on desktop
 - If total is negative, it will change color to red
-
-## To Do:
-- Add full stops and commas to large amounts (like in exchange rate calculator)
+- Full stops and commas added to large amounts (like in exchange rate calculator)
