@@ -179,11 +179,10 @@ function updateTime() {
 function gameOver() {
   localStorage.getItem(baseLeaderboard);
   const lowestScore = baseLeaderboard[9].points;
-  console.log(lowestScore);
   if(score > lowestScore){
     endgameEl.innerHTML = `
     <h2 class="end-game-container__title">Time ran out</h2>
-    <h3 class="end-game-container__subtitle">New High Score!</h3>
+    <h3 class="end-game-container__subtitle">New high score!</h3>
       <p class="end-game-container__final-score">Your final score is: ${score}</p>
       <p class="end-game-container__final-word-count">You typed ${wordCount} words correctly </p>
       <div class="high-score__name">Your name:
@@ -197,7 +196,7 @@ function gameOver() {
   } else {
     endgameEl.innerHTML = `
     <h2 class="end-game-container__title">Time ran out</h2>
-    <h3 class="end-game-container__subtitle">No new High Score...</h3>
+    <h3 class="end-game-container__subtitle">No new high score...</h3>
       <p class="end-game-container__final-score">Your final score is: ${score}</p>
       <p class="end-game-container__final-word-count">You typed ${wordCount} words correctly </p>
         <button class="submit-button submit-button_hide" id="submit-button">Submit</button>
@@ -270,6 +269,5 @@ leaderboardBtn.addEventListener("click", () => {
       <li class="leaderboard__item"><span class="leaderboard__span">${i}. ${item.name}</span> <span class="leaderboard__span">${item.points}</span></li>																									
       `;																									
     });		
-  }
-																							
+  }																				
 });								
