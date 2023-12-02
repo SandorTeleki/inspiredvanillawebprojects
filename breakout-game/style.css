@@ -110,6 +110,7 @@
   transition: transform 1s ease-in-out;
   box-sizing: border-box;
   display: none;
+  z-index: 2;
 }
 
 .leaderboard.show {

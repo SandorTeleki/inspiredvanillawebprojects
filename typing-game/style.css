@@ -95,6 +95,7 @@ button:focus {
   width: 300px;
   background-color: #34495e;
   color: #fff;
+  z-index: 2;
 }
 
 .leaderboard.show {
