@@ -66,6 +66,12 @@
   left: 30px;
 }
 
+.leaderboard-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
 .rules {
   position: absolute;
   top: 0;
@@ -85,3 +91,45 @@
   transform: translateX(0);
 }
 
+.leaderboard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #333;
+  color: #fff;
+  min-height: 100vh;
+  width: 400px;
+  padding: 20px;
+  line-height: 1.5;
+  transform: translateX(400px);
+  transition: transform 1s ease-in-out;
+  box-sizing: border-box;
+  display: none;
+}
+
+.leaderboard.show {
+  transform: translateX(0);
+  display: block;
+}
+
+.leaderboard__title {
+  text-align: center;
+
+}
+
+.leaderboard__list {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.leaderboard__item {
+  margin: 0;
+  padding: 0;
+  /* list-style-type: none; */
+  display: flex;
+  justify-content: space-between;
+}

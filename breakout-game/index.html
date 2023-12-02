@@ -14,6 +14,7 @@
       <a class="nav__title" href="../">Return to Main Page</a>
     </nav>
     <button id="rules-btn" class="btn rules-btn">Show Rules</button>
+    <button id="leaderboard-btn" class="btn leaderboard-btn">Leaderboard</button>
     <div id="rules" class="rules">
       <h2>How To Play:</h2>
       <p>
@@ -21,9 +22,15 @@
         and break the blocks.
       </p>
       <p>If you miss the ball, your score and the blocks will reset.</p>
-      <button class="btn close-button" id="close-btn" >Close</button>
+      <button class="btn close-button" id="how-to-close-btn" >Close</button>
     </div>
-
+    <div id="leaderboard" class="leaderboard">
+      <h2 class="leaderboard__title">Leaderboard</h2>
+      <ol class="leaderboard__list" id="leaderboard-list">
+        <li class="leaderboard__item"><span class="leaderboard__span-title">Name</span> <span class="leaderboard__span-title">Points</span></li>
+      </ol>
+      <button class="btn close-button" id="leaderboard-close-btn" >Close</button>
+    </div>
     <canvas class="canvas" id="canvas" width="800" height="600"></canvas>
     
     <script src="script.js"></script>

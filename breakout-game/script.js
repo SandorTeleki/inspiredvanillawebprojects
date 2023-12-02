@@ -1,6 +1,9 @@
 const rulesBtn = document.getElementById('rules-btn');
-const closeBtn = document.getElementById('close-btn');
-const rules = document.getElementById('rules');
+const leaderboardBtn = document.getElementById('leaderboard-btn');
+const howToCloseBtn = document.getElementById('how-to-close-btn');
+const leaderboardEl = document.getElementById('leaderboard');
+const leaderboardCloseBtn = document.getElementById('leaderboard-close-btn');
+const rulesEl = document.getElementById('rules');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -236,5 +239,7 @@ document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);
 
 // Rules and close event handlers
-rulesBtn.addEventListener('click', () => rules.classList.add('show'));
-closeBtn.addEventListener('click', () => rules.classList.remove('show'));
+rulesBtn.addEventListener('click', () => rulesEl.classList.add('show'));
+howToCloseBtn.addEventListener('click', () => rulesEl.classList.remove('show'));
+leaderboardBtn.addEventListener('click', () => leaderboardEl.classList.add('show'));
+leaderboardCloseBtn.addEventListener('click', () => leaderboardEl.classList.remove('show'));
