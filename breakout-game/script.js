@@ -9,7 +9,7 @@ const ctx = canvas.getContext('2d');
 const leaderboardList = document.getElementById("leaderboard-list");
 const endgameEl = document.getElementById("end-game-container");
 
-let score = 150;
+let score = 0;
 var endGameFlag = 0;
 var flag = 0;
 

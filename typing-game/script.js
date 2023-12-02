@@ -117,7 +117,7 @@ async function getRandomWords(amount) {
 let randomWord;																									
 																									
 // Init score																									
-let score = 0;																							
+let score = 150;																							
 if (score > 15) {																									
   getRandomWords();																									
 }																									
@@ -210,7 +210,10 @@ function gameOver() {
   submitBtn.addEventListener('click', () => {
     const highScoreInput = document.getElementById('high-score__input');
     const highScoreName = highScoreInput.value;
-  
+    if(highScoreName.length < 2){
+      alert('Name is too short!');
+      return;
+    }
     const storedLeaderboard = JSON.parse(localStorage.getItem("baseLeaderboard")) || [];
     storedLeaderboard.push({ name: highScoreName, points: score.toString() });
     baseLeaderboardSort(storedLeaderboard);
