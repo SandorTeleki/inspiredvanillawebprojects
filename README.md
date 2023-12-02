@@ -12,6 +12,7 @@ For these projets, I wanted to practice my basic CSS and JS skills, so many of t
 
 Main Demo page of the project: https://sandorteleki.github.io/inspiredvanillawebprojects/
 
+## Repository and live demo links:
 
 |  #  |            Project             | Live Demo |
 | :-: | :----------------------------: | :-------: |
