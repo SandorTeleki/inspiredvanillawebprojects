@@ -19,8 +19,3 @@ Game where you control a paddle with the arrow keys to bounce a ball up to break
 - Add high score functionality 
 - Added ability to play a new game after clearing all bricks (gives bonus points and resets the board instead of starting a new game like in the default version)
 - Added pause functionality (press 'p')
-
-## To Do/Potential future improvements: 
-- Have bricks be multi-colored (https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
-- Add sticky paddle functionality
-- Double check paddle/bricks hitboxes on edges
