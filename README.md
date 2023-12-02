@@ -1,8 +1,11 @@
+## Intro: 
+
 Mini projects built with HTML5, CSS & JS. The first twenty projects were based on the project repository linked above. I tried to add my own spin to each of the original projects, and then created a few new projects based on what caught my interest. All the projects were gathered into this repository, and are hosted through GitHub pages as a quick hosting and demo solution.
 
 Projects inspired by the course: https://github.com/bradtraversy/vanillawebprojects
 
-# Main page: 
+## Main page: 
+
 This is the home for my Mini Projects. You can either navigate through the projects through the links below in the README.md file, or you can access the main page and access the Mini Projects from there.
 
 For these projets, I wanted to practice my basic CSS and JS skills, so many of the changes (compared to the orignal) come in the form of changing the CSS formating style to using the BEM methodology and trying to add some new JS functions that expand the core functionality of each project.
