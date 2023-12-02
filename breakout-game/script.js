@@ -89,7 +89,7 @@ const ball = {
 const paddle = {
   x: canvas.width / 2 - 40,
   y: canvas.height - 20,
-  w: 160, //80
+  w: 90, //base length: 80
   h: 10,
   speed: 10,
   dx: 0,
@@ -367,7 +367,7 @@ function keyUp(e) {
 
 //Pause functionality
 document.addEventListener("keydown", (e) => {
-  if (e.key === 'p' && pauseGameFlag === 0){
+  if (e.key === 'p' && pauseGameFlag === 0 && endGameFlag === 0){
     pauseGameFlag++;
     paused.classList.add('show');
   } else if ( e.key === 'p' && pauseGameFlag > 0){
