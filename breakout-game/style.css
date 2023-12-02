@@ -1,5 +1,10 @@
 .body {
-  background-color: #0095dd;
+  /* background-color: #0095dd; */
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 149, 221, 1) 23.8%,
+    rgba(0, 82, 123, 1) 92%
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,4 +137,77 @@
   /* list-style-type: none; */
   display: flex;
   justify-content: space-between;
+}
+
+.end-game-container {
+  background-color: #00527b;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  /* top: 100;
+  left: 100; */
+  /* width: 100%;
+  height: 100%; */
+  width: 600px;
+  height: 300px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.end-game-container__title {
+  margin: 0 0 10px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.end-game-container__subtitle {
+  margin: 0 0 20px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.end-game-container__final-score {
+  margin: 10px 0 30px;
+  color: #fff;
+}
+
+.high-score__name {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.high-score__input {
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+.submit-button {
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color:#c2c2c2 ;
+}
+
+.submit-button_hide {
+  display: none;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  outline: none;
+}
+
+.button:hover {
+  background-color:#c2c2c2 ;
 }

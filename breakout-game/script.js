@@ -6,8 +6,11 @@ const leaderboardCloseBtn = document.getElementById('leaderboard-close-btn');
 const rulesEl = document.getElementById('rules');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+const leaderboardList = document.getElementById("leaderboard-list");
+const endgameEl = document.getElementById("end-game-container");
 
 let score = 0;
+var endGameFlag = 0;
 
 const brickRowCount = 9;
 const brickColumnCount = 5;
@@ -28,7 +31,7 @@ const ball = {
 const paddle = {
   x: canvas.width / 2 - 40,
   y: canvas.height - 20,
-  w: 80,
+  w: 160, //80
   h: 10,
   speed: 10,
   dx: 0,
@@ -60,7 +63,7 @@ for (let i = 0; i < brickRowCount; i++) {
 function drawBall() {
   ctx.beginPath();
   ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
-  ctx.fillStyle = ball.visible ? '#00527b' : 'transparent';
+  ctx.fillStyle = ball.visible ? '#b3171a' : 'transparent';
   ctx.fill();
   ctx.closePath();
 }
@@ -144,6 +147,8 @@ function moveBall() {
           ball.y - ball.size < brick.y + brick.h // bottom brick side check
         ) {
           ball.dy *= -1;
+          // ball.dy *= 0; 
+          // ball.dx *= 0;
           brick.visible = false;
 
           increaseScore();
@@ -155,30 +160,41 @@ function moveBall() {
   // Hit bottom wall - Lose
   if (ball.y + ball.size > canvas.height) {
     showAllBricks();
-    score = 0;
+    ball.dx = 0;
+    ball.dy = 0;
+    gameOver();
+    endGameFlag++;
+    // score = 0;
   }
 }
 
 // Increase score
 function increaseScore() {
   score++;
-
-  if (score % (brickRowCount * brickColumnCount) === 0) {
-
-      ball.visible = false;
-      paddle.visible = false;
+  //Redraw board and add extra points for clearing the whole map; also increase ball speed for extra difficulty
+  if (score % (brickRowCount * brickColumnCount) === 0) { //score % (brickRowCount * brickColumnCount) === 0
+      score += 10;
+      ball.visible = true;
+      paddle.visible = true;
+      showAllBricks();
+      paddle.x = canvas.width / 2 - 40;
+      paddle.y = canvas.height - 20;
+      ball.x = canvas.width / 2;
+      ball.y = canvas.height / 2;
+      ball.dy *= 1.3;
+      ball.dx *= 1.3;
 
       //After 0.5 sec restart the game
-      setTimeout(function () {
-          showAllBricks();
-          score = 0;
-          paddle.x = canvas.width / 2 - 40;
-          paddle.y = canvas.height - 20;
-          ball.x = canvas.width / 2;
-          ball.y = canvas.height / 2;
-          ball.visible = true;
-          paddle.visible = true;
-      },delay)
+      // setTimeout(function () {
+      //     showAllBricks();
+      //     score = 0;
+      //     paddle.x = canvas.width / 2 - 40;
+      //     paddle.y = canvas.height - 20;
+      //     ball.x = canvas.width / 2;
+      //     ball.y = canvas.height / 2;
+      //     ball.visible = true;
+      //     paddle.visible = true;
+      // },delay)
   }
 }
 
@@ -207,11 +223,58 @@ function update() {
 
   // Draw everything
   draw();
-
-  requestAnimationFrame(update);
+  if (endGameFlag === 0) {
+    requestAnimationFrame(update);
+  }
 }
 
 update();
+
+
+// Game over, show end screen																									
+function gameOver() {
+  // localStorage.getItem(baseLeaderboard);
+  // const lowestScore = baseLeaderboard[9].points;
+  // console.log(lowestScore);
+  // if(score > lowestScore){
+    endgameEl.innerHTML = `
+    <h2 class="end-game-container__title">You lost</h2>
+    <h3 class="end-game-container__subtitle">New High Score!</h3>
+      <p class="end-game-container__final-score">Your final score is: ${score}</p>
+      <div class="high-score__name">Your name:
+        <input class="high-score__input" id="high-score__input" type="text" minlength="2" maxlength="20" required>
+        <button class="submit-button" id="submit-button">Submit</button>
+      </div>
+      <button class="button" onclick="location.reload()">Reload</button>
+    `;																									
+                                                      
+    endgameEl.style.display = "flex";
+  // } else {
+  //   endgameEl.innerHTML = `
+  //   <h2 class="end-game-container__title">You lost</h2>
+  //   <h3 class="end-game-container__subtitle">No new High Score...</h3>
+  //     <p class="end-game-container__final-score">Your final score is: ${score}</p>
+  //       <button class="submit-button submit-button_hide" id="submit-button">Submit</button>
+  //     <button class="button" onclick="location.reload()">Reload</button>
+  //   `;																									
+                                                      
+  //   endgameEl.style.display = "flex";
+  // };
+  
+  const submitBtn = document.getElementById("submit-button");																									
+  submitBtn.addEventListener('click', () => {
+    const highScoreInput = document.getElementById('high-score__input');
+    const highScoreName = highScoreInput.value;
+  
+    const storedLeaderboard = JSON.parse(localStorage.getItem("baseLeaderboard")) || [];
+    storedLeaderboard.push({ name: highScoreName, points: score.toString() });
+    baseLeaderboardSort(storedLeaderboard);
+    storedLeaderboard.splice(10, 12); // removes lowest score (so only top 10 are displayed)
+    localStorage.setItem("baseLeaderboard", JSON.stringify(storedLeaderboard));
+    location.reload();
+  });
+}	
+
 
 // Keydown event
 function keyDown(e) {
