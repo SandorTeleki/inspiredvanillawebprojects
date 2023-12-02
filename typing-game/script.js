@@ -10,7 +10,7 @@ const settings = document.getElementById("settings");
 const settingsForm = document.getElementById("settings-form");																									
 const leaderboardContainer = document.getElementById("leaderboard");																									
 const leaderboardList = document.getElementById("leaderboard-list");																									
-const difficultySelect = document.getElementById("difficulty");																									
+const difficultySelect = document.getElementById("difficulty");
 																				
 // List of base words for the game																									
 const words = [																									
@@ -117,7 +117,7 @@ async function getRandomWords(amount) {
 let randomWord;																									
 																									
 // Init score																									
-let score = 150;																							
+let score = 0;																							
 if (score > 15) {																									
   getRandomWords();																									
 }																									
@@ -134,7 +134,7 @@ difficultySelect.value = localStorage.getItem("difficulty") !== null ? localStor
 // Focus on text on start																									
 text.focus();																									
 																									
-// Start counting down																									
+// Start counting down																							
 const timeInterval = setInterval(updateTime, 1000);																									
 																									
 // Generate random word from array																									
@@ -273,4 +273,4 @@ leaderboardBtn.addEventListener("click", () => {
       `;																									
     });		
   }																				
-});								
+});
