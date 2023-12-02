@@ -8,9 +8,11 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const leaderboardList = document.getElementById("leaderboard-list");
 const endgameEl = document.getElementById("end-game-container");
+const paused = document.getElementById('paused');
 
 let score = 0;
 var endGameFlag = 0;
+var pauseGameFlag = 0;
 var flag = 0;
 
 const brickRowCount = 9;
@@ -279,7 +281,7 @@ function update() {
 
   // Draw everything
   draw();
-  if (endGameFlag === 0) {
+  if (endGameFlag === 0 && pauseGameFlag === 0) {
     requestAnimationFrame(update);
   }
 }
@@ -298,7 +300,6 @@ function breakoutLeaderboardSort (leaderboard){
 function gameOver() {
   localStorage.getItem(breakoutLeaderboard);
   const lowestScore = breakoutLeaderboard[9].points;
-  console.log(lowestScore);
   if(score > lowestScore){
     endgameEl.innerHTML = `
     <h2 class="end-game-container__title">You lost, but...</h2>
@@ -363,6 +364,18 @@ function keyUp(e) {
     paddle.dx = 0;
   }
 }
+
+//Pause functionality
+document.addEventListener("keydown", (e) => {
+  if (e.key === 'p' && pauseGameFlag === 0){
+    pauseGameFlag++;
+    paused.classList.add('show');
+  } else if ( e.key === 'p' && pauseGameFlag > 0){
+    pauseGameFlag--;
+    paused.classList.remove('show');
+    update();
+  }
+})
 
 
 

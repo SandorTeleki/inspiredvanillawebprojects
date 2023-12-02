@@ -213,3 +213,23 @@
 .button:hover {
   background-color:#c2c2c2 ;
 }
+
+.paused {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 41%;
+  width: 200px;
+  height: 100px;
+  background-color: #222;
+  color: #fff;
+  z-index: 2;
+  border-radius: 15px;
+}
+
+.paused.show{
+  display: flex;
+}
