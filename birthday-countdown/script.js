@@ -10,11 +10,20 @@ const birthdayInput = document.getElementById('birthday-input');
 const submitBtn = document.getElementById('birthday-submit');
 
 const currentYear = new Date().getFullYear();
+const currentMonth = new Date().getMonth();
+const currentDay = new Date().getDate();
+
 
 const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`);
 
+//Set maximum birthday date to current (local) day
+currentDateString = currentYear + '-' + ('0'+ currentMonth).slice(-2) + '-' + ('0'+ currentDay).slice(-2);
+
 // Set background year
-year.innerText = currentYear + 1;
+//year.innerText = currentYear + 1;
+
+//Set max date
+birthdayInput.setAttribute("max", currentDateString);
 
 // Update countdown time
 function updateCountdown() {

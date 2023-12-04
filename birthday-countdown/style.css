@@ -29,10 +29,15 @@
   z-index: -1;
 } */
 
+.container {
+  margin: 0 0 100px;
+}
+
 .birthday-input {
     padding: 5px;
     border: 1px solid #000;
     border-radius: 5px;
+    margin-right: 10px;
 }
 
 .birthday-submit {
@@ -40,6 +45,10 @@
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
+}
+
+.birthday-submit:hover {
+  background-color:#c2c2c2 ;
 }
 
 .page__title {
