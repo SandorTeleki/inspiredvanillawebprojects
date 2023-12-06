@@ -7,8 +7,8 @@ Landing page that counts down from the inputed date to the same date in the next
 - Calculate the days, hours, mins and seconds to the next birthday
 - Insert values into the DOM
 - Show a spinner right before loading the countdown
+- Store and pull birthday from local storage
+- Display what age you will be when the countdown ends (and starts anew for your next birthday)
 
-## To Do:
-- Base config
-- Account for leapyears/february 29th
-- Store birthday date in local storage
+## Potential Improvement:
+- Add special landing effect if current day is your birthday

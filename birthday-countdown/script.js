@@ -16,38 +16,36 @@ const currentHour = new Date().getHours();
 const currentMinutes = new Date().getMinutes();
 const currentSeconds = new Date().getSeconds();
 
-
-const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`);
+// const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`);
 
 //Set maximum birthday date to current (local) day
 currentDateString = currentYear + '-' + ('0'+ currentMonth).slice(-2) + '-' + ('0'+ currentDay).slice(-2);
-
-// Set background year
-//year.innerText = currentYear + 1;
-
-//Set max date
+//Set max date for input date field
 birthdayInput.setAttribute("max", currentDateString);
 
 //Pull info from local storage
 const myBDay = JSON.parse(localStorage.getItem("myBDay")) || '';
 const regEx = /^(\d+)\-(\d+)\-(\d+)/
 const bDayMatch = myBDay.match(regEx);
-const nextYearBirthday = +bDayMatch[1] + 1;
+
+const bDayYear = bDayMatch[1];
 const bDayMonth = bDayMatch[2];
 const bDayDay = bDayMatch[3];
+const thisYearBday = +currentYear;
+const nextYearBDay = +currentYear + 1;
+const thisYearBirthday = new Date (`${thisYearBday},${bDayMonth} , ${bDayDay}`);
+const nextYearBirthday = new Date(`${nextYearBDay} ,${bDayMonth} , ${bDayDay}`);
 
-const newBirthdayTime = nextYearBirthday + '-' + bDayMonth + '-' + bDayDay + '-' + '00' + '00' + '00';
-
-const currentTime2 = currentYear + '-' + ('0'+ currentMonth).slice(-2)  + '-' + ('0'+ currentDay).slice(-2) + '-' + ('0'+ currentHour).slice(-2) + '-' + ('0'+ currentMinutes).slice(-2) + '-' + ('0'+ currentSeconds).slice(-2);
-console.log(currentTime2);
-
-const diff2 = newBirthdayTime - currentTime2;
-console.log(diff2);
+//Calculate age
+const yearsOld = (currentYear - bDayYear) + 1;
+// Set background age
+year.innerText = (yearsOld !== 1 ? `left until you turn ${yearsOld} years old!`: `left until you turn ${yearsOld} year old!`);
 
 // Update countdown time
 function updateCountdown() {
   const currentTime = new Date();
-  const diff = newYearTime - currentTime;
+  const nextBirthday = ((thisYearBirthday - currentTime) < 0 ? nextYearBirthday - currentTime : thisYearBirthday - currentTime);
+  const diff = nextBirthday;
 
   const d = Math.floor(diff / 1000 / 60 / 60 / 24);
   const h = Math.floor(diff / 1000 / 60 / 60) % 24;
@@ -65,13 +63,14 @@ function updateCountdown() {
 setTimeout(() => {
   loading.remove();
   countdown.style.display = 'flex';
-}, 2000);
+}, 1000);
 
 // Run every second
 setInterval(updateCountdown, 1000);
 
 submitBtn.addEventListener('click', () => {
   const myBDay = birthdayInput.value;
+  console.log(myBDay);
   localStorage.setItem("myBDay", JSON.stringify(myBDay));
   location.reload();
 })
