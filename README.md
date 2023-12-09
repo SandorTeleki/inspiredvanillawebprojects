@@ -1,6 +1,6 @@
 ## Intro: 
 
-Mini projects built with HTML5, CSS & JS. The first twenty projects were based on the project repository linked above. I tried to add my own spin to each of the original projects, and then created a few new projects based on what caught my interest. All the projects were gathered into this repository, and are hosted through GitHub pages as a quick hosting and demo solution.
+Mini projects built with HTML5, CSS & JS. The first twenty projects were based on the project repository linked below. I tried to add my own spin to each of the original projects. Afterwards, I created a few new projects based on what caught my interest. All the projects were gathered into this repository, and are hosted through GitHub pages as a quick hosting and demo solution.
 
 Projects inspired by the course: https://github.com/bradtraversy/vanillawebprojects
 
